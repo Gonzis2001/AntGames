@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Agua Material
+  m_Name: LagoMat
   m_Shader: {fileID: -6465566751694194690, guid: 8fb82baf181da03499a1a6ef29dc5a90,
     type: 3}
   m_Parent: {fileID: 0}
@@ -114,7 +114,7 @@ Material:
     - _GlossMapScale: 0
     - _Glossiness: 0
     - _GlossyReflections: 0
-    - _Height: 0.005
+    - _Height: 0.001
     - _Metallic: 0
     - _Noise_Scale: 1.14
     - _OcclusionStrength: 1
@@ -135,7 +135,7 @@ Material:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _ColorAzul: {r: 0.32547167, g: 0.41112608, b: 1, a: 0}
-    - _Deep: {r: 0.16745284, g: 0.30542454, b: 0.5, a: 0}
+    - _Deep: {r: 0.16197936, g: 0.3124332, b: 0.5283019, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _Foam_Color: {r: 1, g: 1, b: 1, a: 0}
     - _Shallow: {r: 0.4745098, g: 0.7057462, b: 0.85882354, a: 0}

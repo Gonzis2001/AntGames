@@ -29,6 +29,9 @@
         },
         {
             "m_Id": "2f71a8fed0bc4ee0af20f3b5aaef4625"
+        },
+        {
+            "m_Id": "40b8e1a156b44c0f9d40243da819b51c"
         }
     ],
     "m_Keywords": [],
@@ -1464,9 +1467,9 @@
     "hlslDeclarationOverride": 0,
     "m_Hidden": false,
     "m_Value": {
-        "r": 0.0,
-        "g": 0.0,
-        "b": 0.0,
+        "r": 0.47641509771347048,
+        "g": 0.6263040900230408,
+        "b": 1.0,
         "a": 0.0
     },
     "isMainColor": false,
@@ -1494,9 +1497,9 @@
     "hlslDeclarationOverride": 0,
     "m_Hidden": false,
     "m_Value": {
-        "r": 0.0,
-        "g": 0.0,
-        "b": 0.0,
+        "r": 1.0,
+        "g": 1.0,
+        "b": 1.0,
         "a": 0.0
     },
     "isMainColor": false,
@@ -2544,6 +2547,9 @@
         },
         {
             "m_Id": "2f71a8fed0bc4ee0af20f3b5aaef4625"
+        },
+        {
+            "m_Id": "40b8e1a156b44c0f9d40243da819b51c"
         }
     ]
 }
@@ -2649,6 +2655,36 @@
     "m_CustomColors": {
         "m_SerializableColors": []
     }
+}
+
+{
+    "m_SGVersion": 3,
+    "m_Type": "UnityEditor.ShaderGraph.Internal.ColorShaderProperty",
+    "m_ObjectId": "40b8e1a156b44c0f9d40243da819b51c",
+    "m_Guid": {
+        "m_GuidSerialized": "c8cf1c71-830b-4b71-9de0-9883d68792f1"
+    },
+    "m_Name": "ColorAzul",
+    "m_DefaultRefNameVersion": 1,
+    "m_RefNameGeneratedByDisplayName": "ColorAzul",
+    "m_DefaultReferenceName": "_ColorAzul",
+    "m_OverrideReferenceName": "",
+    "m_GeneratePropertyBlock": true,
+    "m_UseCustomSlotLabel": false,
+    "m_CustomSlotLabel": "",
+    "m_DismissedVersion": 0,
+    "m_Precision": 0,
+    "overrideHLSLDeclaration": false,
+    "hlslDeclarationOverride": 0,
+    "m_Hidden": false,
+    "m_Value": {
+        "r": 0.3254716992378235,
+        "g": 0.4111260771751404,
+        "b": 1.0,
+        "a": 0.0
+    },
+    "isMainColor": false,
+    "m_ColorMode": 0
 }
 
 {
@@ -5511,8 +5547,8 @@
     "m_Hidden": false,
     "m_Value": {
         "r": 0.0,
-        "g": 0.0,
-        "b": 0.0,
+        "g": 0.034836843609809878,
+        "b": 0.24528300762176515,
         "a": 0.0
     },
     "isMainColor": false,
