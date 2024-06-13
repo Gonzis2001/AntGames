@@ -14,7 +14,7 @@ public class DropZone : MonoBehaviour, IDropHandler
             Debug.Log("Carta soltada en la zona de juego");
 
             // Por ejemplo, jugar la carta
-            // draggable.PlayCard();
+            draggable.card.Play();
         }
     }
 }

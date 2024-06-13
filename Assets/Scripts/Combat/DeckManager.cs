@@ -1,27 +1,36 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class DeckManager : MonoBehaviour
 {
     [SerializeField] private List<Card> deck;
     [SerializeField] private List<Card> hand;
-    [SerializeField] private List<Card> graveyar;
+    [SerializeField] private List<Card> graveyard;
     [SerializeField] private Transform handTransform;
     [SerializeField] private int numdraw;
-   [SerializeField] private GameObject cardPrefab; 
+   [SerializeField] private GameObject cardPrefab;
+    [SerializeField] private TMP_Text deckText;
+    [SerializeField] private TMP_Text graveyardText;
     void Start()
     {
         ShuffleDeck();
         DrawHand();
     }
+    private void Update()
+    {
+        deckText.text=deck.Count.ToString();
+        graveyardText.text = graveyard.Count.ToString();
+    }
 
     void DrawHand()
     {
-        if(deck.Count <= 0)
+        if(deck.Count <= 0)//si el mazo esta vacio barajea el mazo del cementeio
         {
-            deck = graveyar;
-            graveyar.Clear();
+            deck = graveyard;
+            graveyard.Clear();
             ShuffleDeck();
         }
         for (int i = 0; i < numdraw; i++) 
@@ -38,22 +47,18 @@ public class DeckManager : MonoBehaviour
             deck.RemoveAt(0);
             hand.Add(drawnCard);
 
-        
-            float offsetX = 400f; 
-          
-            Vector3 newPosition = handTransform.position + Vector3.right * (hand.Count - 1) * offsetX;
-
-         
-            GameObject cardUI = Instantiate(cardPrefab, newPosition, Quaternion.identity, handTransform);
+           
+            GameObject cardUI = Instantiate(cardPrefab, handTransform);
             DraggableCard draggableCard = cardUI.GetComponent<DraggableCard>();
             draggableCard.InitializeCard(drawnCard);
-
+           
 
         }
         
     }
     void ShuffleDeck()
     {
+        //baraja el mazo 
         System.Random rng = new System.Random();
         int n = deck.Count;
         while (n > 1)
@@ -65,4 +70,11 @@ public class DeckManager : MonoBehaviour
             deck[n] = value;
         }
     }
+    public void CardToGraveyar(Card card)
+    {
+        //remueve la carta jugada y se añade al cementerio
+        hand.Remove(card);
+        graveyard.Add(card);
+    }
+   
 }

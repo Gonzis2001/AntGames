@@ -20,6 +20,7 @@ public class DraggableCard : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
     private RectTransform rectTransform;
     private Vector2 originalPosition;
     private Canvas canvas;
+    [SerializeField] GameObject deckmanager;
 
     private void Awake()
     {
@@ -27,6 +28,10 @@ public class DraggableCard : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
         rectTransform = GetComponent<RectTransform>();
         canvas = GetComponentInParent<Canvas>();
         originalPosition = rectTransform.anchoredPosition;
+    }
+    private void Start()
+    {
+        deckmanager = GameObject.Find("GameManager");
     }
 
     public void InitializeCard(Card newCard)
@@ -42,6 +47,7 @@ public class DraggableCard : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
 
     public void OnBeginDrag(PointerEventData eventData)
     {
+        originalPosition = rectTransform.anchoredPosition;
         canvasGroup.blocksRaycasts = false;
         canvasGroup.alpha = 0.6f;
     }
@@ -59,13 +65,13 @@ public class DraggableCard : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
         if (eventData.pointerCurrentRaycast.gameObject != null)
         {
             DropZone dropZone = eventData.pointerCurrentRaycast.gameObject.GetComponent<DropZone>();
-            if (dropZone != null)
+            if (dropZone != null&& deckmanager.GetComponent<CombatManager>().Energy>=card.Cost)
             {
                 dropZone.OnDrop(eventData);
-              
-                card.Play();
-                
                 Destroy(gameObject);
+                deckmanager.GetComponent<DeckManager>().CardToGraveyar(card);
+                deckmanager.GetComponent<CombatManager>().Energy-=card.Cost;
+                
             }
             else
             {
