@@ -8,7 +8,8 @@ using UnityEngine;
 public class PlayerSO : ScriptableObject
 {
 
-    public int hP;
+    public float hP;
+    public float hPmax;
     public int attack;
     public int magic;
     public int defense;
@@ -17,6 +18,7 @@ public class PlayerSO : ScriptableObject
     public int exp;
      public int level;
      public int vel;
+    public string Pj;
 
 
 }

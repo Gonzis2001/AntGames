@@ -9,17 +9,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4a6b8018d298e0e41a289d365067e0c0, type: 3}
-  m_Name: Protagonist1
+  m_Script: {fileID: 11500000, guid: 7439a54cc09312a4087e5d55edfb29c9, type: 3}
+  m_Name: Lobo
   m_EditorClassIdentifier: 
-  hP: 0.73
+  hP: 10
   hPmax: 10
   attack: 3
   magic: 3
   defense: 3
   defenseMagic: 3
-  energy: 1
-  exp: 0
-  level: 0
   vel: 3
-  Pj: 
+  enemies: 
