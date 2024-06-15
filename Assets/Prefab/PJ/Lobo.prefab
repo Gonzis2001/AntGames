@@ -35,7 +35,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: -734, y: -639}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2206152587405705855
 CanvasRenderer:
@@ -52,7 +52,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2008703282559081184}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
@@ -87,7 +87,7 @@ GameObject:
   - component: {fileID: 89873759073451107}
   - component: {fileID: 2903278994329093424}
   - component: {fileID: 5134129974438764002}
-  - component: {fileID: 7102013098040296522}
+  - component: {fileID: 7912809734191926969}
   m_Layer: 0
   m_Name: loboV1
   m_TagString: Enemy
@@ -182,7 +182,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 5.216387, y: 0.9171594, z: 3.7311008}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &7102013098040296522
+--- !u!114 &7912809734191926969
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -191,7 +191,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2083818929722027559}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 327a4764ac17a8c4585971c15588e72d, type: 3}
+  m_Script: {fileID: 11500000, guid: 69e79d40d43ce1f4ab997837b0c74804, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   enemyStats: {fileID: 11400000, guid: b28d0f988b31e834c99bcc264b169c32, type: 2}
@@ -223,7 +223,7 @@ RectTransform:
   m_GameObject: {fileID: 3188205245390665920}
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 2.510001}
-  m_LocalScale: {x: 0.01, y: 0.009999997, z: 0.009999997}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 8384888098888309684}
@@ -232,7 +232,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: -0}
-  m_SizeDelta: {x: 740, y: 71.5}
+  m_SizeDelta: {x: 740, y: 640}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &317990419413649647
 Canvas:

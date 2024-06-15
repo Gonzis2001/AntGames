@@ -20,7 +20,7 @@ public class DraggableCard : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
     private RectTransform rectTransform;
     private Vector2 originalPosition;
     private Canvas canvas;
-    [SerializeField] GameObject deckmanager;
+    [SerializeField]  public GameObject deckmanager;
 
     private void Awake()
     {

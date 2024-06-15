@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "Enemy", menuName = "Enemies")]
+
 public class  EnemySo : ScriptableObject
 {
     
@@ -15,7 +15,19 @@ public class  EnemySo : ScriptableObject
         public int vel;
 
         public string enemies;
-   
+
+    public virtual float TakePDamage(float damage,float life,float defense)
+    {
+        life -= (damage-defense);
+      
+        return(life);
+    }
+    public virtual float TakeMDamage(float damage, float life, float defense)
+    {
+        life -= (damage-defense);
+
+        return (life);
+    }
 
 
 }

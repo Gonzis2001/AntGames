@@ -10,11 +10,15 @@ public class DropZone : MonoBehaviour, IDropHandler
         DraggableCard draggable = eventData.pointerDrag.GetComponent<DraggableCard>();
         if (draggable != null)
         {
-            // Implementar la lógica cuando una carta es soltada en esta zona
-            Debug.Log("Carta soltada en la zona de juego");
+            if(draggable.deckmanager.GetComponent<CombatManager>().Energy >= draggable.card.Cost)
+            {
+             // Implementar la lógica cuando una carta es soltada en esta zona
+              Debug.Log("Carta soltada en la zona de juego");
 
-            // Por ejemplo, jugar la carta
-            draggable.card.Play();
+              // Por ejemplo, jugar la carta
+              draggable.card.Play();
+
+            }
         }
     }
 }

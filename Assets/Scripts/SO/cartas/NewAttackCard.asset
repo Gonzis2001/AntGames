@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5afb5f9178d408c4087997cc5191c01e, type: 3}
-  m_Name: 1
+  m_Name: NewAttackCard
   m_EditorClassIdentifier: 
-  cardName: Knight
-  cardHability: "haces 13 de da\xF1o"
-  cardType: Ataque
+  cardName: 1
+  cardHability: 1
+  cardType: 1
   cost: 0
-  art: {fileID: 21300000, guid: cf53513307d4be649a4edbbb0da25723, type: 3}
-  artCharacter: {fileID: 21300000, guid: ef87b868a6dc1254284316ce9de472d1, type: 3}
+  art: {fileID: 21300000, guid: a5adf4b08fddcc340b82b4a4620ed298, type: 3}
+  artCharacter: {fileID: 21300000, guid: 0dfee807f09581f4a8f13a889827bd17, type: 3}
   pj: {fileID: 11400000, guid: 0d68ab7ee3df6b54dbcf2eeee9b8518a, type: 2}

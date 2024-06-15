@@ -1,18 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class HabiltyCard : MonoBehaviour
+[CreateAssetMenu(fileName = "Libra", menuName = "Cards/Libra")]
+public class HabiltyCard : Card
 {
-    // Start is called before the first frame update
-    void Start()
+    private GameObject enemySelector;
+    public override void Play()
     {
-        
+        enemySelector = GameObject.Find("GameManager");
+        if (enemySelector.GetComponent<EnemySelector>().selectedEnemy != null)
+        {
+            enemySelector.GetComponent<EnemySelector>().selectedEnemy.GetComponentInChildren<Image>().enabled = true;
+        }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
+

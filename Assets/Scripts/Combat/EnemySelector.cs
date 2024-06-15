@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class EnemySelector : MonoBehaviour
 {
-    private GameObject selectedEnemy;
+    public GameObject selectedEnemy;
     [SerializeField] private GameObject selectedPrefab;
     private GameObject selectedPrefabActive;
     
