@@ -194,7 +194,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69e79d40d43ce1f4ab997837b0c74804, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyStats: {fileID: 11400000, guid: d39d0c74ac57c7147ad1e388459c4639, type: 2}
+  enemyStats: {fileID: 11400000, guid: 7da0a384869d46a46bf426be4ebd90a4, type: 2}
   hP: 0
   hPmax: 0
   attack: 0
@@ -202,6 +202,7 @@ MonoBehaviour:
   defense: 0
   defenseMagic: 0
   vel: 0
+  buffatacck: 0
 --- !u!1 &3188205245390665920
 GameObject:
   m_ObjectHideFlags: 0

@@ -28,7 +28,7 @@ public  class  EnemySo : ScriptableObject
 
         return (life);
     }
-    public virtual void Accion(float damage, ShowLife objetivo)
+    public virtual void Accion(float damage, ShowLife objetivo,Enemies me)
     {
 
     }

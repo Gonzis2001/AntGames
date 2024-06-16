@@ -19,9 +19,19 @@ public class Lobo :  EnemySo
 
     }
 
-    public override void Accion(float damage, ShowLife objetivo)
+    public override void Accion(float damage, ShowLife objetivo, Enemies me)
     {
-        objetivo.hP -=damage;
+        float random = Random.Range(0f, 1f);
+        if (random <= 0.6f)
+        {
+         objetivo.hP -=damage;
+
+        }
+        else
+        {
+            
+            me.buffatacck = 3;
+        }
        
     }
 }

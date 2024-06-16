@@ -17,6 +17,7 @@ public class Enemies : MonoBehaviour
     private Canvas canva;
     private Image lifeBar;
     private Transform cameras;
+   [SerializeField] public int buffatacck;
     private void Start()
     {
         lifeBar = GetComponentInChildren<Image>();
@@ -35,6 +36,7 @@ public class Enemies : MonoBehaviour
             canva.transform.LookAt(cameras);
             canva.transform.rotation = new Quaternion(canva.transform.rotation.x, 0, 0, canva.transform.rotation.w);
         }
+        UpdateBuffs();
     }
     private void UpdateStats()
     {
@@ -62,6 +64,22 @@ public class Enemies : MonoBehaviour
             lifeBar.color = Color.red;
         }
     }
+    private void UpdateBuffs()
+    {
+        if (buffatacck > 0)
+        {
+            attack = enemyStats.attack * 2;
+        }
+    }
+    public void BuffDown()
+    {
+        buffatacck -= 1;
+        if (buffatacck < 0)
+        {
+            buffatacck = 0;
+            attack=enemyStats.attack;
+        }
+    }
    
     public void TakeMagicDamage(float damage)
     {
@@ -74,10 +92,10 @@ public class Enemies : MonoBehaviour
        hP = enemyStats.TakePDamage(damage, hP, enemyStats.defense);
     }
 
-    public void UseHability(ShowLife pj)
+    public void UseHability(ShowLife pj,Enemies me)
     {
       
-         enemyStats.Accion(attack, pj);
+         enemyStats.Accion(attack, pj,me);
     }
 
     

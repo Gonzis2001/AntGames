@@ -120,7 +120,8 @@ public class CombatManager : MonoBehaviour
         {
             
             var a = pj[Random.Range(0, pj.Count )];
-            enemies[0].UseHability(a);
+            enemies[i].UseHability(a, enemies[i]);
+            enemies[i].BuffDown();
            
 
             yield return new WaitForSeconds(0.2f);
