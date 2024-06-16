@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-public class  EnemySo : ScriptableObject
+public  class  EnemySo : ScriptableObject
 {
     
         public float hP;
@@ -28,6 +28,9 @@ public class  EnemySo : ScriptableObject
 
         return (life);
     }
+    public virtual void Accion(float damage, ShowLife objetivo)
+    {
 
+    }
 
 }

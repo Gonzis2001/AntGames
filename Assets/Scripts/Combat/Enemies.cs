@@ -73,6 +73,14 @@ public class Enemies : MonoBehaviour
         
        hP = enemyStats.TakePDamage(damage, hP, enemyStats.defense);
     }
+
+    public void UseHability(ShowLife pj)
+    {
+      
+         enemyStats.Accion(attack, pj);
+    }
+
+    
      
 
 }

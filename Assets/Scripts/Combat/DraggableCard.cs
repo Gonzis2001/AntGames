@@ -16,6 +16,7 @@ public class DraggableCard : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
     public TMP_Text descriptionText;
     public TMP_Text costText;
     public TMP_Text tipeText;
+    public Image backGroundHability;
     private CanvasGroup canvasGroup;
     private RectTransform rectTransform;
     private Vector2 originalPosition;
@@ -43,6 +44,18 @@ public class DraggableCard : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
         descriptionText.text = card.CardHability;
         tipeText.text = card.CardType;
         costText.text = card.Cost.ToString();
+        if (card.CardType == "Habilidad")
+        {
+            backGroundHability.color = Color.yellow;
+        }
+        else if (card.CardType == "Ataque")
+        {
+            backGroundHability.color = Color.red;
+        }
+        else if (card.CardType == "Magia")
+        {
+            backGroundHability.color = Color.blue;
+        }
     }
 
     public void OnBeginDrag(PointerEventData eventData)

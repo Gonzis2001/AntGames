@@ -9,8 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7439a54cc09312a4087e5d55edfb29c9, type: 3}
-  m_Name: Lobo
+  m_Script: {fileID: 11500000, guid: 327a4764ac17a8c4585971c15588e72d, type: 3}
+  m_Name: New Lobo
   m_EditorClassIdentifier: 
   hP: 10
   hPmax: 10

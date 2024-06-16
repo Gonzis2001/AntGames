@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6157955592342882859}
   m_Layer: 0
   m_Name: PJ1
-  m_TagString: Untagged
+  m_TagString: PJ
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -47,6 +47,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerSO: {fileID: 11400000, guid: 0d68ab7ee3df6b54dbcf2eeee9b8518a, type: 2}
+  cameras: {fileID: 0}
+  hP: 0
+  hPmax: 0
+  attack: 0
+  magic: 0
+  defense: 0
+  defenseMagic: 0
+  exp: 0
+  level: 0
+  vel: 0
+  energy: 0
 --- !u!1 &3296677168155645452
 GameObject:
   m_ObjectHideFlags: 0
