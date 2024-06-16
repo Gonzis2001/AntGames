@@ -5,7 +5,7 @@ using UnityEditor.Rendering;
 using UnityEngine;
 using UnityEngine.UI;
 
-[CreateAssetMenu]
+[CreateAssetMenu( menuName = "Enemies/Wolf")]
 public class Lobo :  EnemySo
 {
     public override float TakePDamage(float damaga,float life, float defense)
@@ -17,5 +17,11 @@ public class Lobo :  EnemySo
     {
         return base.TakeMDamage(damaga, life, defense);
 
+    }
+
+    public override void Accion(float damage, ShowLife objetivo)
+    {
+        objetivo.hP -=damage;
+       
     }
 }

@@ -1377,6 +1377,8 @@ MonoBehaviour:
   descriptionText: {fileID: 4658142689909571141}
   costText: {fileID: 3814246779664408599}
   tipeText: {fileID: 4678992637101168262}
+  backGroundHability: {fileID: 2712381579942396290}
+  deckmanager: {fileID: 0}
 --- !u!114 &6419346102509605146
 MonoBehaviour:
   m_ObjectHideFlags: 0
