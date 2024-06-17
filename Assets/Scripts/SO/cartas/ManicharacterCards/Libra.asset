@@ -18,4 +18,5 @@ MonoBehaviour:
   cost: 1
   art: {fileID: 21300000, guid: 0b5e00fd73087cb49b293e3087f854c6, type: 3}
   artCharacter: {fileID: 21300000, guid: 44db13b08ee89f24189009dfba603291, type: 3}
-  pj: {fileID: 0}
+  pj: PJ
+  player: {fileID: 0}

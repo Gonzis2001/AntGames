@@ -13,9 +13,10 @@ MonoBehaviour:
   m_Name: MagicAttack
   m_EditorClassIdentifier: 
   cardName: Petardos
-  cardHability: "Haces x da\xF1o"
+  cardHability: "Haces da\xF1o magico"
   cardType: Magia
-  cost: 0
+  cost: 1
   art: {fileID: 0}
   artCharacter: {fileID: 0}
-  pj: {fileID: 11400000, guid: 0d68ab7ee3df6b54dbcf2eeee9b8518a, type: 2}
+  pj: PJ
+  player: {fileID: 0}

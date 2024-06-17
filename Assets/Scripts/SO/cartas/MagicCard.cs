@@ -13,7 +13,7 @@ public class MagicCard : Card
         if (enemySelector.GetComponent<EnemySelector>().selectedEnemy != null)
         {
 
-            enemySelector.GetComponent<EnemySelector>().selectedEnemy.GetComponent<Enemies>().TakeMagicDamage(Pj.magic);
+            enemySelector.GetComponent<EnemySelector>().selectedEnemy.GetComponent<Enemies>().TakeMagicDamage(Player.magic);
 
         }
 

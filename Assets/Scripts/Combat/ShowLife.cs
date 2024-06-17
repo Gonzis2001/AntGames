@@ -21,6 +21,8 @@ public class ShowLife : MonoBehaviour
     public int level;
     public int vel;
     public int energy;
+    public int defenseBuff;
+
 
 
 
@@ -68,5 +70,14 @@ public class ShowLife : MonoBehaviour
         level = playerSO.level;
         vel = playerSO.vel;
         energy = playerSO.energy;
+    }
+    public void BuffDown()
+    {
+        defenseBuff -= 1;
+        if (defenseBuff < 0)
+        {
+            defenseBuff = 0;
+            defense = playerSO.defense;
+        }
     }
 }

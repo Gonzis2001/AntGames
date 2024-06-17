@@ -11,9 +11,13 @@ public class DeckManager : MonoBehaviour
     [SerializeField] private List<Card> graveyard;
     [SerializeField] private Transform handTransform;
     [SerializeField] private int numdraw;
+    [SerializeField] private int maxhand;
    [SerializeField] private GameObject cardPrefab;
     [SerializeField] private TMP_Text deckText;
     [SerializeField] private TMP_Text graveyardText;
+
+
+
     void Start()
     {
         ShuffleDeck();
@@ -25,14 +29,11 @@ public class DeckManager : MonoBehaviour
         graveyardText.text = graveyard.Count.ToString();
     }
 
-    void DrawHand()
+  public  void DrawHand()
     {
-        if(deck.Count <= 0)//si el mazo esta vacio barajea el mazo del cementeio
-        {
-            deck = graveyard;
-            graveyard.Clear();
-            ShuffleDeck();
-        }
+       
+        numdraw=maxhand-hand.Count;
+        Debug.Log(numdraw);
         for (int i = 0; i < numdraw; i++) 
         {
             DrawCard();
@@ -41,6 +42,17 @@ public class DeckManager : MonoBehaviour
 
     void DrawCard()
     {
+        if (deck.Count <= 0)
+        {
+            int rebarajar=graveyard.Count;
+            for (int i = 0;i < rebarajar;i++)
+            {
+                Card drawnCard = graveyard[0];
+                graveyard.RemoveAt(0);
+                deck.Add(drawnCard);
+            }
+            ShuffleDeck() ;
+        }
         if (deck.Count > 0)
         {
             Card drawnCard = deck[0];

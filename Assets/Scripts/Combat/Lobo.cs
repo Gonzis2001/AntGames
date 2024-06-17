@@ -10,7 +10,9 @@ public class Lobo :  EnemySo
 {
     public override float TakePDamage(float damaga,float life, float defense)
     {
+      
          return base.TakePDamage(damaga,life,defense);
+
         
     }
     public override float TakeMDamage(float damaga, float life, float defense)
@@ -24,12 +26,13 @@ public class Lobo :  EnemySo
         float random = Random.Range(0f, 1f);
         if (random <= 0.6f)
         {
-         objetivo.hP -=damage;
+            me.animator.SetTrigger("Attack");
+         objetivo.hP -=damage-objetivo.defense;
 
         }
         else
         {
-            
+            me.animator.SetTrigger("Howl");
             me.buffatacck = 3;
         }
        

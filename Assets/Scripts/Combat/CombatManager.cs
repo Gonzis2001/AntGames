@@ -6,6 +6,7 @@ using UnityEngine;
 public class CombatManager : MonoBehaviour
 {
     [SerializeField] private int energy;
+    private int energyMax;
 
     [SerializeField] private PlayerSO pj1;
     [SerializeField] private PlayerSO pj2;
@@ -23,30 +24,38 @@ public class CombatManager : MonoBehaviour
     [SerializeField] private bool turn;
     private bool turnEnemy;
     [SerializeField] private GameObject dropZone;
+    private DeckManager deckManager;
 
    
 
     
 
     public int Energy { get => energy; set => energy = value; }
-   
+    private void Awake()
+    {
+        deckManager = GetComponent<DeckManager>();
+    }
+
     private void Start()
     {
 
         if (pj3 != null)
         {
             Energy= pj1.energy+pj2.energy+pj3.energy;
+            energyMax= Energy;
             pjVel=(pj1.vel+pj2.vel+pj3.vel)/3;
 
         }
         else if (pj2==null)
         {
             Energy = pj1.energy;
+            energyMax = Energy;
             pjVel = pj1.vel;
         }
         else if (pj3==null)
         {
             Energy = pj1.energy + pj2.energy;
+            energyMax = Energy;
             pjVel = (pj1.vel+pj2.vel)/2;
         }
         pjGameObjects = GameObject.FindGameObjectsWithTag("PJ");
@@ -63,6 +72,7 @@ public class CombatManager : MonoBehaviour
           {
               
              enemies.Add(enemiesGameObject[i].GetComponent<Enemies>());
+           
           }
         
         for (int i = 0;i < enemies.Count; i++)
@@ -105,6 +115,11 @@ public class CombatManager : MonoBehaviour
         if (turn)
         {
             dropZone.SetActive(false);
+            for (int i = 0;i<pj.Count ; i++)
+            {
+                pj[i].BuffDown();
+ 
+            }
             turn=false;
             turnEnemy = true;
         }
@@ -122,11 +137,22 @@ public class CombatManager : MonoBehaviour
             var a = pj[Random.Range(0, pj.Count )];
             enemies[i].UseHability(a, enemies[i]);
             enemies[i].BuffDown();
-           
 
-            yield return new WaitForSeconds(0.2f);
+            AnimatorStateInfo initialStateInfo = enemies[i].animator.GetCurrentAnimatorStateInfo(0);
+
+         
+            yield return new WaitUntil(() =>
+                enemies[i].animator.GetCurrentAnimatorStateInfo(0).fullPathHash != initialStateInfo.fullPathHash);
+
+           
+            yield return new WaitUntil(() =>
+                enemies[i].animator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 0.95f);
 
         }
-       
+        dropZone.SetActive(true);
+        turn = true;
+        turnEnemy = false;
+        energy = energyMax;
+        deckManager.DrawHand();
     }
 }

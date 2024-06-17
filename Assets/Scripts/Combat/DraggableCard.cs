@@ -21,6 +21,8 @@ public class DraggableCard : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
     private RectTransform rectTransform;
     private Vector2 originalPosition;
     private Canvas canvas;
+    [SerializeField] private GameObject plater;
+  
     [SerializeField]  public GameObject deckmanager;
 
     private void Awake()
@@ -33,6 +35,8 @@ public class DraggableCard : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
     private void Start()
     {
         deckmanager = GameObject.Find("GameManager");
+        plater = GameObject.FindGameObjectWithTag(card.Pj);
+       card.Player =plater.GetComponent<ShowLife>(); 
     }
 
     public void InitializeCard(Card newCard)

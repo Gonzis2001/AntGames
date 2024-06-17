@@ -15,6 +15,7 @@ public  class  EnemySo : ScriptableObject
         public int vel;
 
         public string enemies;
+  
 
     public virtual float TakePDamage(float damage,float life,float defense)
     {

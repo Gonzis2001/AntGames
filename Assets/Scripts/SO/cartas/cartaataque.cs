@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class cartaataque : Card
 {
      private GameObject enemySelector;
+    [SerializeField] private float multiply;
 
 
     public override void Play()
@@ -15,7 +16,7 @@ public class cartaataque : Card
         if (enemySelector.GetComponent<EnemySelector>().selectedEnemy != null)
         {
             
-            enemySelector.GetComponent<EnemySelector>().selectedEnemy.GetComponent<Enemies>().TakePhysicaldamage(Pj.attack);
+            enemySelector.GetComponent<EnemySelector>().selectedEnemy.GetComponent<Enemies>().TakePhysicaldamage(Player.attack*multiply);
           
         }
  

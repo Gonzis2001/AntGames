@@ -2833,13 +2833,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78b10534d179cd140b8d02f7d41ae603, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pjPrefabs:
-  - {fileID: 2062355573070377524, guid: bf93131cbcc02ce4da306bbe827a70a2, type: 3}
-  - {fileID: 5385997284784711953, guid: ab48120f945cd1b47a02cafa550daf4e, type: 3}
-  enemeisPrefabs:
-  - {fileID: 7397332272472163882, guid: d38084b8080a7e44cbbf876031716f7e, type: 3}
-  - {fileID: 7397332272472163882, guid: d38084b8080a7e44cbbf876031716f7e, type: 3}
-  - {fileID: 1662453507032446269, guid: 4de3daa3d1abcc74c8a09d82c93f7005, type: 3}
+  combatSO: {fileID: 11400000, guid: 303f1fe7b3664874fb440adc5e49888e, type: 2}
+  pjPrefabs: []
+  enemeisPrefabs: []
   pjSpawns:
   - {fileID: 1510865881}
   - {fileID: 1834930370}
@@ -2876,13 +2872,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deck:
+  - {fileID: 11400000, guid: 8f220e9d6b3d7b646a17739e9fe2c67c, type: 2}
+  - {fileID: 11400000, guid: 8f220e9d6b3d7b646a17739e9fe2c67c, type: 2}
+  - {fileID: 11400000, guid: 8f220e9d6b3d7b646a17739e9fe2c67c, type: 2}
+  - {fileID: 11400000, guid: 7a568f9546b51c04295293fd0000d4d0, type: 2}
   - {fileID: 11400000, guid: c9bcb68869cba3643a7e70adcd1688e6, type: 2}
-  - {fileID: 11400000, guid: e8d256c85e7f416499168c599064dbfa, type: 2}
+  - {fileID: 11400000, guid: c9bcb68869cba3643a7e70adcd1688e6, type: 2}
+  - {fileID: 11400000, guid: fd9f6a82e8d976743a40841347a15962, type: 2}
   - {fileID: 11400000, guid: fd9f6a82e8d976743a40841347a15962, type: 2}
   hand: []
   graveyard: []
   handTransform: {fileID: 751794487}
-  numdraw: 3
+  numdraw: 0
+  maxhand: 3
   cardPrefab: {fileID: 8943494175438951672, guid: b029de9c446dfa04ab5c9c728a0c1ade,
     type: 3}
   deckText: {fileID: 2078032205}

@@ -17,11 +17,17 @@ public class Enemies : MonoBehaviour
     private Canvas canva;
     private Image lifeBar;
     private Transform cameras;
+    public Animator animator;
    [SerializeField] public int buffatacck;
-    private void Start()
+    private void Awake()
     {
+        animator = GetComponent<Animator>();
         lifeBar = GetComponentInChildren<Image>();
         canva = GetComponentInChildren<Canvas>();
+        
+    }
+    private void Start()
+    {
         cameras = GameObject.Find("Main Camera").transform;
         UpdateStats();
     }
@@ -83,13 +89,15 @@ public class Enemies : MonoBehaviour
    
     public void TakeMagicDamage(float damage)
     {
+        animator.SetTrigger("TakeDamage");
         hP = enemyStats.TakeMDamage(damage, hP, enemyStats.defenseMagic);
+
     }
 
     public void TakePhysicaldamage(float damage)
     {
-        
-       hP = enemyStats.TakePDamage(damage, hP, enemyStats.defense);
+        animator.SetTrigger("TakeDamage");
+        hP = enemyStats.TakePDamage(damage, hP, enemyStats.defense);
     }
 
     public void UseHability(ShowLife pj,Enemies me)
