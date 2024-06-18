@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEditor.Rendering;
 using UnityEngine;
+using TMPro;
 using UnityEngine.UI;
 
 [CreateAssetMenu( menuName = "Enemies/Wolf")]
@@ -11,20 +12,21 @@ public class Lobo :  EnemySo
     [SerializeField] private AudioClip attackSound;
     [SerializeField] private AudioClip howlSound;
     [SerializeField] private AudioClip damageSound;
-    public override float TakePDamage(float damaga, float life, float defense, Animator animator, AudioSource audiosorce)
+    public override float TakePDamage(float damaga, float life, float defense, Animator animator, AudioSource audiosorce, TMP_Text texDamage)
     {
       
         audiosorce.PlayOneShot(damageSound);
         animator.SetTrigger("TakeDamage");
-         return base.TakePDamage(damaga,life,defense,animator,audiosorce);
+        
+         return base.TakePDamage(damaga,life,defense,animator,audiosorce,texDamage);
 
 
     }
-    public override float TakeMDamage(float damaga, float life, float defense, Animator animator, AudioSource audiosorce)
+    public override float TakeMDamage(float damaga, float life, float defense, Animator animator, AudioSource audiosorce, TMP_Text texDamage)
     {
         audiosorce.PlayOneShot(damageSound);
         animator.SetTrigger("TakeDamage");
-        return base.TakeMDamage(damaga, life, defense, animator, audiosorce);
+        return base.TakeMDamage(damaga, life, defense, animator, audiosorce, texDamage);
 
     }
 

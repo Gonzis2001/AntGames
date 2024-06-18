@@ -22,6 +22,7 @@ public class ShowLife : MonoBehaviour
     public int vel;
     public int energy;
     public int defenseBuff;
+    public int attackNerf;
 
 
 
@@ -78,6 +79,12 @@ public class ShowLife : MonoBehaviour
         {
             defenseBuff = 0;
             defense = playerSO.defense;
+        }
+        attackNerf -= 1;
+        if (attackNerf < 0)
+        {
+            attackNerf = 0;
+            attackNerf = playerSO.attack;
         }
     }
 }

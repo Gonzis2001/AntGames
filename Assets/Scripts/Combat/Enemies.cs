@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -21,6 +22,7 @@ public class Enemies : MonoBehaviour
    [SerializeField] public int buffatacck;
     public AudioSource audioSource;
     private CombatManager combbatManager;
+    [SerializeField] private TMP_Text textdamage;
     private void Awake()
     {
         animator = GetComponent<Animator>();
@@ -95,7 +97,8 @@ public class Enemies : MonoBehaviour
     public void TakeMagicDamage(float damage)
     {
         //animator.SetTrigger("TakeDamage");
-        hP = enemyStats.TakeMDamage(damage, hP, enemyStats.defenseMagic,animator,audioSource);
+        hP = enemyStats.TakeMDamage(damage, hP, enemyStats.defenseMagic,animator,audioSource,textdamage);
+        StartCoroutine(enemyStats.MostrateDamgage(damage,hP, enemyStats.defense, textdamage));
         enemyStats.Die(hP, this.gameObject,transform.parent,combbatManager);
 
     }
@@ -103,7 +106,8 @@ public class Enemies : MonoBehaviour
     public void TakePhysicaldamage(float damage)
     {
        // animator.SetTrigger("TakeDamage");
-        hP = enemyStats.TakePDamage(damage, hP, enemyStats.defense, animator, audioSource);
+        hP = enemyStats.TakePDamage(damage, hP, enemyStats.defense, animator, audioSource,textdamage);
+        StartCoroutine(enemyStats.MostrateDamgage(damage,hP ,enemyStats.defense, textdamage));
         enemyStats.Die(hP, this.gameObject, transform.parent, combbatManager);
 
     }

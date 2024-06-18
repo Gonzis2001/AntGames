@@ -17,9 +17,9 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   enemeisPrefabs:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  positionpj: {x: -6.579896, y: -13.25685}
-  id: 01000000
+  - {fileID: 7397332272472163882, guid: d38084b8080a7e44cbbf876031716f7e, type: 3}
+  - {fileID: 7022051133755125032, guid: 10efe16f3fffc124fb3006c8bdfcd65f, type: 3}
+  - {fileID: 7022051133755125032, guid: 10efe16f3fffc124fb3006c8bdfcd65f, type: 3}
+  positionpj: {x: 9.444363, y: -11.632587}
+  id: 0100000002000000
   firstTime: 1
