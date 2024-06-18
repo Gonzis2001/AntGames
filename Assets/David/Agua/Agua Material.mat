@@ -138,6 +138,6 @@ Material:
     - _Deep: {r: 0.16745284, g: 0.30542454, b: 0.5, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _Foam_Color: {r: 1, g: 1, b: 1, a: 0}
-    - _Shallow: {r: 0.4745098, g: 0.7057462, b: 0.85882354, a: 0}
+    - _Shallow: {r: 0.06132078, g: 0.15595423, b: 1, a: 0}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
   m_BuildTextureStacks: []
