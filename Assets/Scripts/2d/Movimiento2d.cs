@@ -1,17 +1,15 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Movimiento2d : MonoBehaviour
 {
-   private ControlesPJ2D input =null;
+    private ControlesPJ2D input = null;
     private Vector2 moveVector = Vector2.zero;
-    private Rigidbody2D rb= null;
+    private Rigidbody2D rb = null;
     private Animator animator = null;
     [SerializeField] private float speedMove;
     private void Awake()
     {
-        input = new ControlesPJ2D();   
+        input = new ControlesPJ2D();
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
     }
@@ -22,7 +20,7 @@ public class Movimiento2d : MonoBehaviour
         input.Player.Move.canceled += Move_canceled;
     }
 
-  
+
 
     private void OnDisable()
     {
@@ -40,7 +38,7 @@ public class Movimiento2d : MonoBehaviour
     }
     private void Update()
     {
-        animator.SetFloat("Velocity",rb.velocity.magnitude);
+        animator.SetFloat("Velocity", rb.velocity.magnitude);
         animator.SetFloat("X", moveVector.x);
         animator.SetFloat("Y", moveVector.y);
 
@@ -48,6 +46,6 @@ public class Movimiento2d : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        rb.velocity = moveVector*speedMove;
+        rb.velocity = moveVector * speedMove;
     }
 }
