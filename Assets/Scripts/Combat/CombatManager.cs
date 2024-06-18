@@ -15,7 +15,7 @@ public class CombatManager : MonoBehaviour
     [SerializeField] private TMP_Text energyText;
     [SerializeField] private List<ShowLife> pj;
     [SerializeField] private GameObject[] pjGameObjects;
-    [SerializeField] private List<Enemies> enemies;
+    public  List<Enemies> enemies;
 
     [SerializeField] private GameObject[] enemiesGameObject;
 
@@ -25,6 +25,8 @@ public class CombatManager : MonoBehaviour
     private bool turnEnemy;
     [SerializeField] private GameObject dropZone;
     private DeckManager deckManager;
+    [SerializeField] private GameObject canvasCombat;
+    [SerializeField] private GameObject canvasEnd;
 
    
 
@@ -107,6 +109,13 @@ public class CombatManager : MonoBehaviour
             {
                 StartCoroutine(EnemyTurn());
             }
+        }
+        if(enemies.Count <= 0) 
+        {
+            canvasCombat.SetActive(false);
+            canvasEnd.SetActive(true);
+
+
         }
     }
     public void PassTurn()

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 
@@ -15,15 +16,16 @@ public  class  EnemySo : ScriptableObject
         public int vel;
 
         public string enemies;
+    public GameObject dieEffect;
   
 
-    public virtual float TakePDamage(float damage,float life,float defense)
+    public virtual float TakePDamage(float damage,float life,float defense,Animator animator, AudioSource audiosorce)
     {
         life -= (damage-defense);
       
         return(life);
     }
-    public virtual float TakeMDamage(float damage, float life, float defense)
+    public virtual float TakeMDamage(float damage, float life, float defense, Animator animator, AudioSource audiosorce)
     {
         life -= (damage-defense);
 
@@ -33,5 +35,16 @@ public  class  EnemySo : ScriptableObject
     {
 
     }
+    public virtual void Die(float life,GameObject me,Transform spawn,CombatManager combat)
+    {
+        if (life <= 0)
+        {
+            combat.enemies.Remove(me.GetComponent<Enemies>());
+            Destroy(me);
+            Instantiate(dieEffect,spawn.position,Quaternion.identity);
+
+        }
+    }
+    
 
 }

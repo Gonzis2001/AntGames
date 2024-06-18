@@ -19,6 +19,8 @@ public class Enemies : MonoBehaviour
     private Transform cameras;
     public Animator animator;
    [SerializeField] public int buffatacck;
+    public AudioSource audioSource;
+    private CombatManager combbatManager;
     private void Awake()
     {
         animator = GetComponent<Animator>();
@@ -29,6 +31,8 @@ public class Enemies : MonoBehaviour
     private void Start()
     {
         cameras = GameObject.Find("Main Camera").transform;
+        audioSource = GameObject.Find("GameManager").GetComponent < AudioSource >();
+        combbatManager = GameObject.Find("GameManager").GetComponent<CombatManager>();
         UpdateStats();
     }
 
@@ -77,6 +81,7 @@ public class Enemies : MonoBehaviour
             attack = enemyStats.attack * 2;
         }
     }
+
     public void BuffDown()
     {
         buffatacck -= 1;
@@ -89,15 +94,18 @@ public class Enemies : MonoBehaviour
    
     public void TakeMagicDamage(float damage)
     {
-        animator.SetTrigger("TakeDamage");
-        hP = enemyStats.TakeMDamage(damage, hP, enemyStats.defenseMagic);
+        //animator.SetTrigger("TakeDamage");
+        hP = enemyStats.TakeMDamage(damage, hP, enemyStats.defenseMagic,animator,audioSource);
+        enemyStats.Die(hP, this.gameObject,transform.parent,combbatManager);
 
     }
 
     public void TakePhysicaldamage(float damage)
     {
-        animator.SetTrigger("TakeDamage");
-        hP = enemyStats.TakePDamage(damage, hP, enemyStats.defense);
+       // animator.SetTrigger("TakeDamage");
+        hP = enemyStats.TakePDamage(damage, hP, enemyStats.defense, animator, audioSource);
+        enemyStats.Die(hP, this.gameObject, transform.parent, combbatManager);
+
     }
 
     public void UseHability(ShowLife pj,Enemies me)

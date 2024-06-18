@@ -8,16 +8,23 @@ using UnityEngine.UI;
 [CreateAssetMenu( menuName = "Enemies/Wolf")]
 public class Lobo :  EnemySo
 {
-    public override float TakePDamage(float damaga,float life, float defense)
+    [SerializeField] private AudioClip attackSound;
+    [SerializeField] private AudioClip howlSound;
+    [SerializeField] private AudioClip damageSound;
+    public override float TakePDamage(float damaga, float life, float defense, Animator animator, AudioSource audiosorce)
     {
       
-         return base.TakePDamage(damaga,life,defense);
+        audiosorce.PlayOneShot(damageSound);
+        animator.SetTrigger("TakeDamage");
+         return base.TakePDamage(damaga,life,defense,animator,audiosorce);
 
-        
+
     }
-    public override float TakeMDamage(float damaga, float life, float defense)
+    public override float TakeMDamage(float damaga, float life, float defense, Animator animator, AudioSource audiosorce)
     {
-        return base.TakeMDamage(damaga, life, defense);
+        audiosorce.PlayOneShot(damageSound);
+        animator.SetTrigger("TakeDamage");
+        return base.TakeMDamage(damaga, life, defense, animator, audiosorce);
 
     }
 
@@ -26,15 +33,22 @@ public class Lobo :  EnemySo
         float random = Random.Range(0f, 1f);
         if (random <= 0.6f)
         {
+            me.audioSource.PlayOneShot(attackSound);
             me.animator.SetTrigger("Attack");
          objetivo.hP -=damage-objetivo.defense;
 
         }
         else
         {
+            me.audioSource.PlayOneShot(howlSound);
             me.animator.SetTrigger("Howl");
             me.buffatacck = 3;
         }
        
     }
+    public override void Die(float life, GameObject me, Transform spawn, CombatManager combat)
+    {
+        base.Die(life, me, spawn,combat);  
+    }
+
 }
