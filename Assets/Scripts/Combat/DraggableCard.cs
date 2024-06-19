@@ -53,22 +53,8 @@ public class DraggableCard : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
         descriptionText.text = card.CardHability;
         tipeText.text = card.CardType;
         costText.text = card.Cost.ToString();
-        switch (card.CardType)
-        {
-            case "Habilidad":
-                backGroundHability.color = Color.yellow;
-                
-                break;
-            case "Ataque":
-                backGroundHability.color = Color.red;
-                break;
-            case "Magia":
-                backGroundHability.color = Color.blue;
-                break;
-            case "Objeto":
-                backGroundHability.color = Color.gray;
-                break;
-        }
+        backGroundHability.sprite = card.Artbackground;
+       
     }
 
     public void OnBeginDrag(PointerEventData eventData)

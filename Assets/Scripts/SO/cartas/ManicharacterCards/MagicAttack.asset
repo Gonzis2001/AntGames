@@ -19,5 +19,6 @@ MonoBehaviour:
   art: {fileID: 21300000, guid: 09bc288c1edee2648a5f56d41df30dd4, type: 3}
   artCharacter: {fileID: 21300000, guid: 47eb1026a8cec094b926265730c55e10, type: 3}
   artType: {fileID: 21300000, guid: 87e1af239daea0c4cba3fc99c7cdad60, type: 3}
+  artbackground: {fileID: 21300000, guid: d6de974eb835b4e4f8af05a97f51e432, type: 3}
   pj: PJ
   player: {fileID: 0}

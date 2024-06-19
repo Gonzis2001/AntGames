@@ -12,6 +12,7 @@ public abstract class Card : ScriptableObject
     [SerializeField] private Sprite art;
     [SerializeField] private Sprite artCharacter;
     [SerializeField] private Sprite artType;
+    [SerializeField] private Sprite artbackground;
     [SerializeField] private string pj;
     [SerializeField] private ShowLife player;
     public Sprite ArtCharacter { get => artCharacter; set => artCharacter = value; }
@@ -23,6 +24,7 @@ public abstract class Card : ScriptableObject
     public string Pj { get => pj; set => pj = value; }
     public ShowLife Player { get => player; set => player = value; }
     public Sprite ArtType { get => artType; set => artType = value; }
+    public Sprite Artbackground { get => artbackground; set => artbackground = value; }
 
     public abstract void Play();
 
