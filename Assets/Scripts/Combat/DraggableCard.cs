@@ -39,7 +39,7 @@ public class DraggableCard : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
     {
         deckmanager = GameObject.Find("GameManager");
         plater = GameObject.FindGameObjectWithTag(card.Pj);
-       card.Player =plater.GetComponent<ShowLife>(); 
+        card.Player =plater.GetComponent<ShowLife>(); 
     }
 
     public void InitializeCard(Card newCard)
