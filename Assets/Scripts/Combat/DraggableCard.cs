@@ -60,6 +60,10 @@ public class DraggableCard : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
         {
             backGroundHability.color = Color.blue;
         }
+        else if (card.CardType == "Objeto")
+        {
+            backGroundHability.color = Color.gray;
+        }
     }
 
     public void OnBeginDrag(PointerEventData eventData)
@@ -86,7 +90,16 @@ public class DraggableCard : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
             {
                 dropZone.OnDrop(eventData);
                 Destroy(gameObject);
+                 if (card.CardType != "Objeto")
+                {
+                    
                 deckmanager.GetComponent<DeckManager>().CardToGraveyar(card);
+                }
+                else
+                {
+                    deckmanager.GetComponent<DeckManager>().hand.Remove(card);
+                }
+
                 deckmanager.GetComponent<CombatManager>().Energy-=card.Cost;
                 
             }

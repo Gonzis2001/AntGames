@@ -120,20 +120,35 @@ public class CombatManager : MonoBehaviour
     }
     public void PassTurn()
     {
-       
+
         if (turn)
         {
             dropZone.SetActive(false);
-            for (int i = 0;i<pj.Count ; i++)
+            for (int i = 0; i < pj.Count; i++)
             {
                 pj[i].BuffDown();
- 
+
             }
-            turn=false;
+            turn = false;
             turnEnemy = true;
+            int numCartasEliminar = deckManager.hand.Count;
+            for (int i = 0; i < numCartasEliminar; i++)
+            {
+                deckManager.CardToGraveyar(deckManager.hand[0]);
+            }
+            DraggableCard[] cartasDestruir;
+            cartasDestruir = canvasCombat.GetComponentsInChildren<DraggableCard>();
+            for (int i = 0; i < cartasDestruir.Length; i++)
+            {
+                Destroy(cartasDestruir[i].gameObject);
+            }
+
+
+
         }
+
     }
-    
+
     private IEnumerator EnemyTurn()
     {
         turnEnemy = false;
@@ -142,9 +157,20 @@ public class CombatManager : MonoBehaviour
 
        for (int i = 0; i < enemies.Count; i++)
         {
-            
-            var a = pj[Random.Range(0, pj.Count )];
-            enemies[i].UseHability(a, enemies[i]);
+
+            ShowLife objetivo = null;
+            int intentos = 0;
+            while (objetivo == null && intentos < pj.Count)
+            {
+                ShowLife potentialTarget = pj[Random.Range(0, pj.Count)];
+                if (potentialTarget.hP > 0)
+                {
+                    objetivo = potentialTarget;
+                }
+                intentos++;
+            }
+
+            enemies[i].UseHability(objetivo, enemies[i]);
             enemies[i].BuffDown();
 
             AnimatorStateInfo initialStateInfo = enemies[i].animator.GetCurrentAnimatorStateInfo(0);
@@ -162,6 +188,7 @@ public class CombatManager : MonoBehaviour
         turn = true;
         turnEnemy = false;
         energy = energyMax;
+        deckManager.CanDrawObject = true;
         deckManager.DrawHand();
     }
 }
