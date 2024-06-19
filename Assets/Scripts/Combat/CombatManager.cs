@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CombatManager : MonoBehaviour
 {
@@ -26,13 +27,22 @@ public class CombatManager : MonoBehaviour
     [SerializeField] private GameObject dropZone;
     private DeckManager deckManager;
     [SerializeField] private GameObject canvasCombat;
-    [SerializeField] private GameObject canvasEnd;
+    [SerializeField] private GameObject canvasEndVicorty;
+    [SerializeField] private GameObject canvasEndDefeat;
+    [SerializeField] private int exp;
+    private bool expActualizar=false;
+    [SerializeField] private Image characterImage;
+    [SerializeField] private Image expBar;
+    [SerializeField] private TMP_Text characterText;
+    [SerializeField] private TMP_Text levelText;
+    [SerializeField] private TMP_Text expText;
 
-   
 
-    
+
 
     public int Energy { get => energy; set => energy = value; }
+    public int Exp { get => exp; set => exp = value; }
+
     private void Awake()
     {
         deckManager = GetComponent<DeckManager>();
@@ -112,12 +122,85 @@ public class CombatManager : MonoBehaviour
         }
         if(enemies.Count <= 0) 
         {
-            canvasCombat.SetActive(false);
-            canvasEnd.SetActive(true);
+             if(!expActualizar) 
+            { 
+             StartCoroutine(Actualizarexp());
+            
+            
+            }
 
 
         }
+        bool allDead = true;
+        for (int i = 0; i < pj.Count; i++)
+        {
+            if (pj[i].hP > 0)
+            {
+                allDead = false;
+
+            }
+        }
+        if (allDead)
+        {
+            canvasCombat.SetActive(false);
+            canvasEndDefeat.SetActive(true);
+            
+        }
+
     }
+    private IEnumerator Actualizarexp()
+    {
+        canvasCombat.SetActive(false);
+        canvasEndVicorty.SetActive(true);
+        if (pj3 != null)
+        {
+            pj1.exp += exp / 3;
+            ActualizarExp(pj1);
+            pj2.exp += exp / 3;
+            ActualizarExp(pj2);
+            pj3.exp += exp / 3;
+            ActualizarExp(pj3);
+
+
+        }
+        else if (pj2 == null)
+        {
+            pj1.exp += exp;
+            ActualizarExp(pj1);
+        }
+        else if (pj3 == null)
+        {
+            pj1.exp += exp / 2;
+            ActualizarExp(pj1);
+            pj2.exp += exp / 2;
+            ActualizarExp(pj2);
+        }
+       characterImage.sprite = pj1.image;
+        if (pj1.expMax > 0)
+        {
+        expBar.fillAmount = (pj1.exp /pj1.expMax);
+
+        }
+        Debug.Log(expBar.fillAmount);
+
+        levelText.text = "Nivel: "+pj1.level.ToString();
+         expText.text = pj1.exp.ToString() + " / " + pj1.expMax.ToString();
+        expActualizar = true;
+        yield return null;
+
+    }
+    private void ActualizarExp(PlayerSO pj)
+    {
+        while (pj.exp >= pj.expMax)
+        {
+            pj.level += 1;
+
+            pj.exp -= pj.expMax;
+
+            pj.expMax *= 2;
+        }
+    }
+
     public void PassTurn()
     {
 

@@ -15,9 +15,12 @@ public  class  EnemySo : ScriptableObject
         public int defense;
         public int defenseMagic;
         public int vel;
-   
+    public int exp;
+    public int level;
 
-        public string enemies;
+
+
+    public string enemies;
     public GameObject dieEffect;
   
 
@@ -42,8 +45,10 @@ public  class  EnemySo : ScriptableObject
     }
     public virtual void Die(float life,GameObject me,Transform spawn,CombatManager combat)
     {
-        if (life <= 0)
+        if (life < 0)
         {
+
+            combat.Exp += me.GetComponent<Enemies>().exp;
             combat.enemies.Remove(me.GetComponent<Enemies>());
             Destroy(me);
             Instantiate(dieEffect,spawn.position,Quaternion.identity);

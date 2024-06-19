@@ -15,6 +15,7 @@ public class Enemies : MonoBehaviour
     public int defense;
     public int defenseMagic;
     public int vel;
+    public int exp;
     private Canvas canva;
     private Image lifeBar;
     private Transform cameras;
@@ -58,6 +59,7 @@ public class Enemies : MonoBehaviour
         magic = enemyStats.magic;
         defense = enemyStats.defense;
         defenseMagic = enemyStats.defenseMagic;
+        exp = enemyStats.exp * enemyStats.level;
     }
     private void ChangeColorLifeBar()
     {

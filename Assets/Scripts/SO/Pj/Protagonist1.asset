@@ -14,12 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hP: 10
   hPmax: 10
-  attack: 3
-  magic: 3
+  attack: 4
+  magic: 4
   defense: 0
   defenseMagic: 3
   energy: 1
-  exp: 0
-  level: 0
+  exp: 50
+  expMax: 160
+  level: 6
   vel: 3
   Pj: 
+  image: {fileID: 21300000, guid: ef87b868a6dc1254284316ce9de472d1, type: 3}

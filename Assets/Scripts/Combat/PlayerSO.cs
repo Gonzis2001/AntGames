@@ -16,9 +16,11 @@ public class PlayerSO : ScriptableObject
     public int defenseMagic;
     public int energy;
     public int exp;
+    public int expMax;
      public int level;
      public int vel;
     public string Pj;
+    public Sprite image;
 
 
 }

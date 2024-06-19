@@ -19,6 +19,8 @@ MonoBehaviour:
   defense: 3
   defenseMagic: 3
   vel: 3
+  exp: 20
+  level: 1
   enemies: 
   dieEffect: {fileID: 2245877132120861987, guid: 3f05559d2ec5b9447bab8d01ef8ab592,
     type: 3}
