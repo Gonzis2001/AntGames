@@ -1,0 +1,250 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Suelo
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 0
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings:
+    - serializedVersion: 3
+      m_BuildTarget: DefaultTexturePlatform
+      m_MaxTextureSize: 2048
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: -1
+      m_TextureCompression: 0
+      m_CompressionQuality: 50
+      m_CrunchedCompression: 0
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 0
+      m_IgnorePlatformSupport: 0
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 1
+      enableAlphaDilation: 0
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: 2800000, guid: a7943f79210fe484a88f22791ad938d5, type: 3}
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+    packedSpriteRenderDataKeys:
+    - a7943f79210fe484a88f22791ad938d5: -190155060
+    - a7943f79210fe484a88f22791ad938d5: -984751577
+    - a7943f79210fe484a88f22791ad938d5: 2043489046
+    - a7943f79210fe484a88f22791ad938d5: -182720914
+    - a7943f79210fe484a88f22791ad938d5: -808477855
+    - a7943f79210fe484a88f22791ad938d5: -1562571377
+    - a7943f79210fe484a88f22791ad938d5: 1158808543
+    - a7943f79210fe484a88f22791ad938d5: -1580371217
+    - a7943f79210fe484a88f22791ad938d5: -941582882
+    - a7943f79210fe484a88f22791ad938d5: 1926738112
+    - a7943f79210fe484a88f22791ad938d5: -1947373885
+    - a7943f79210fe484a88f22791ad938d5: -816232058
+    - a7943f79210fe484a88f22791ad938d5: -174829705
+    - a7943f79210fe484a88f22791ad938d5: 2000818684
+    - a7943f79210fe484a88f22791ad938d5: 42031014
+    - a7943f79210fe484a88f22791ad938d5: -653363035
+    - a7943f79210fe484a88f22791ad938d5: -1120007332
+    - a7943f79210fe484a88f22791ad938d5: -713635511
+    - a7943f79210fe484a88f22791ad938d5: -1199779413
+    - a7943f79210fe484a88f22791ad938d5: 8635313
+    - a7943f79210fe484a88f22791ad938d5: 1319727892
+    - a7943f79210fe484a88f22791ad938d5: 2054426118
+    - a7943f79210fe484a88f22791ad938d5: 1494378701
+    - a7943f79210fe484a88f22791ad938d5: -1046770986
+    - a7943f79210fe484a88f22791ad938d5: -1480616011
+    - a7943f79210fe484a88f22791ad938d5: 2113734143
+    - a7943f79210fe484a88f22791ad938d5: -1693467148
+    - a7943f79210fe484a88f22791ad938d5: -1673299810
+    - a7943f79210fe484a88f22791ad938d5: -171165304
+    - a7943f79210fe484a88f22791ad938d5: -303628655
+    - a7943f79210fe484a88f22791ad938d5: 338938618
+    - a7943f79210fe484a88f22791ad938d5: -418000545
+    - a7943f79210fe484a88f22791ad938d5: -895999803
+    - a7943f79210fe484a88f22791ad938d5: 747546570
+    - a7943f79210fe484a88f22791ad938d5: -1042232126
+    - a7943f79210fe484a88f22791ad938d5: 1114739174
+    - a7943f79210fe484a88f22791ad938d5: 285127809
+    - a7943f79210fe484a88f22791ad938d5: -797276406
+    - a7943f79210fe484a88f22791ad938d5: 1697335421
+    - a7943f79210fe484a88f22791ad938d5: -1236892986
+    - a7943f79210fe484a88f22791ad938d5: 135647965
+    - a7943f79210fe484a88f22791ad938d5: -824422658
+    - a7943f79210fe484a88f22791ad938d5: -1265168080
+    - a7943f79210fe484a88f22791ad938d5: 1962668975
+    - a7943f79210fe484a88f22791ad938d5: 1064309212
+    - a7943f79210fe484a88f22791ad938d5: 1727159190
+    - a7943f79210fe484a88f22791ad938d5: 1402221830
+    - a7943f79210fe484a88f22791ad938d5: -1159327164
+    - a7943f79210fe484a88f22791ad938d5: 1100770697
+    - a7943f79210fe484a88f22791ad938d5: -707888799
+    - a7943f79210fe484a88f22791ad938d5: 1459385812
+    - a7943f79210fe484a88f22791ad938d5: 481440066
+    - a7943f79210fe484a88f22791ad938d5: 1370411283
+    - a7943f79210fe484a88f22791ad938d5: -1377468607
+    - a7943f79210fe484a88f22791ad938d5: 952745510
+    - a7943f79210fe484a88f22791ad938d5: 1436097851
+    - a7943f79210fe484a88f22791ad938d5: -408995910
+    - a7943f79210fe484a88f22791ad938d5: -641725873
+    - a7943f79210fe484a88f22791ad938d5: -1195536722
+    - a7943f79210fe484a88f22791ad938d5: -1989750314
+    - a7943f79210fe484a88f22791ad938d5: 1546366344
+    - a7943f79210fe484a88f22791ad938d5: 156012534
+    - a7943f79210fe484a88f22791ad938d5: 1306587035
+    - a7943f79210fe484a88f22791ad938d5: 2143306051
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: -190155060, guid: a7943f79210fe484a88f22791ad938d5, type: 3}
+  - {fileID: -984751577, guid: a7943f79210fe484a88f22791ad938d5, type: 3}
+  - {fileID: 2043489046, guid: a7943f79210fe484a88f22791ad938d5, type: 3}
+  - {fileID: -182720914, guid: a7943f79210fe484a88f22791ad938d5, type: 3}
+  - {fileID: -808477855, guid: a7943f79210fe484a88f22791ad938d5, type: 3}
+  - {fileID: -1562571377, guid: a7943f79210fe484a88f22791ad938d5, type: 3}
+  - {fileID: 1158808543, guid: a7943f79210fe484a88f22791ad938d5, type: 3}
+  - {fileID: -1580371217, guid: a7943f79210fe484a88f22791ad938d5, type: 3}
+  - {fileID: -941582882, guid: a7943f79210fe484a88f22791ad938d5, type: 3}
+  - {fileID: 1926738112, guid: a7943f79210fe484a88f22791ad938d5, type: 3}
+  - {fileID: -1947373885, guid: a7943f79210fe484a88f22791ad938d5, type: 3}
+  - {fileID: -816232058, guid: a7943f79210fe484a88f22791ad938d5, type: 3}
+  - {fileID: -174829705, guid: a7943f79210fe484a88f22791ad938d5, type: 3}
+  - {fileID: 2000818684, guid: a7943f79210fe484a88f22791ad938d5, type: 3}
+  - {fileID: 42031014, guid: a7943f79210fe484a88f22791ad938d5, type: 3}
+  - {fileID: -653363035, guid: a7943f79210fe484a88f22791ad938d5, type: 3}
+  - {fileID: -1120007332, guid: a7943f79210fe484a88f22791ad938d5, type: 3}
+  - {fileID: -713635511, guid: a7943f79210fe484a88f22791ad938d5, type: 3}
+  - {fileID: -1199779413, guid: a7943f79210fe484a88f22791ad938d5, type: 3}
+  - {fileID: 8635313, guid: a7943f79210fe484a88f22791ad938d5, type: 3}
+  - {fileID: 1319727892, guid: a7943f79210fe484a88f22791ad938d5, type: 3}
+  - {fileID: 2054426118, guid: a7943f79210fe484a88f22791ad938d5, type: 3}
+  - {fileID: 1494378701, guid: a7943f79210fe484a88f22791ad938d5, type: 3}
+  - {fileID: -1046770986, guid: a7943f79210fe484a88f22791ad938d5, type: 3}
+  - {fileID: -1480616011, guid: a7943f79210fe484a88f22791ad938d5, type: 3}
+  - {fileID: 2113734143, guid: a7943f79210fe484a88f22791ad938d5, type: 3}
+  - {fileID: -1693467148, guid: a7943f79210fe484a88f22791ad938d5, type: 3}
+  - {fileID: -1673299810, guid: a7943f79210fe484a88f22791ad938d5, type: 3}
+  - {fileID: -171165304, guid: a7943f79210fe484a88f22791ad938d5, type: 3}
+  - {fileID: -303628655, guid: a7943f79210fe484a88f22791ad938d5, type: 3}
+  - {fileID: 338938618, guid: a7943f79210fe484a88f22791ad938d5, type: 3}
+  - {fileID: -418000545, guid: a7943f79210fe484a88f22791ad938d5, type: 3}
+  - {fileID: -895999803, guid: a7943f79210fe484a88f22791ad938d5, type: 3}
+  - {fileID: 747546570, guid: a7943f79210fe484a88f22791ad938d5, type: 3}
+  - {fileID: -1042232126, guid: a7943f79210fe484a88f22791ad938d5, type: 3}
+  - {fileID: 1114739174, guid: a7943f79210fe484a88f22791ad938d5, type: 3}
+  - {fileID: 285127809, guid: a7943f79210fe484a88f22791ad938d5, type: 3}
+  - {fileID: -797276406, guid: a7943f79210fe484a88f22791ad938d5, type: 3}
+  - {fileID: 1697335421, guid: a7943f79210fe484a88f22791ad938d5, type: 3}
+  - {fileID: -1236892986, guid: a7943f79210fe484a88f22791ad938d5, type: 3}
+  - {fileID: 135647965, guid: a7943f79210fe484a88f22791ad938d5, type: 3}
+  - {fileID: -824422658, guid: a7943f79210fe484a88f22791ad938d5, type: 3}
+  - {fileID: -1265168080, guid: a7943f79210fe484a88f22791ad938d5, type: 3}
+  - {fileID: 1962668975, guid: a7943f79210fe484a88f22791ad938d5, type: 3}
+  - {fileID: 1064309212, guid: a7943f79210fe484a88f22791ad938d5, type: 3}
+  - {fileID: 1727159190, guid: a7943f79210fe484a88f22791ad938d5, type: 3}
+  - {fileID: 1402221830, guid: a7943f79210fe484a88f22791ad938d5, type: 3}
+  - {fileID: -1159327164, guid: a7943f79210fe484a88f22791ad938d5, type: 3}
+  - {fileID: 1100770697, guid: a7943f79210fe484a88f22791ad938d5, type: 3}
+  - {fileID: -707888799, guid: a7943f79210fe484a88f22791ad938d5, type: 3}
+  - {fileID: 1459385812, guid: a7943f79210fe484a88f22791ad938d5, type: 3}
+  - {fileID: 481440066, guid: a7943f79210fe484a88f22791ad938d5, type: 3}
+  - {fileID: 1370411283, guid: a7943f79210fe484a88f22791ad938d5, type: 3}
+  - {fileID: -1377468607, guid: a7943f79210fe484a88f22791ad938d5, type: 3}
+  - {fileID: 952745510, guid: a7943f79210fe484a88f22791ad938d5, type: 3}
+  - {fileID: 1436097851, guid: a7943f79210fe484a88f22791ad938d5, type: 3}
+  - {fileID: -408995910, guid: a7943f79210fe484a88f22791ad938d5, type: 3}
+  - {fileID: -641725873, guid: a7943f79210fe484a88f22791ad938d5, type: 3}
+  - {fileID: -1195536722, guid: a7943f79210fe484a88f22791ad938d5, type: 3}
+  - {fileID: -1989750314, guid: a7943f79210fe484a88f22791ad938d5, type: 3}
+  - {fileID: 1546366344, guid: a7943f79210fe484a88f22791ad938d5, type: 3}
+  - {fileID: 156012534, guid: a7943f79210fe484a88f22791ad938d5, type: 3}
+  - {fileID: 1306587035, guid: a7943f79210fe484a88f22791ad938d5, type: 3}
+  - {fileID: 2143306051, guid: a7943f79210fe484a88f22791ad938d5, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - tile set ciudad_57
+  - tile set ciudad_56
+  - tile set ciudad_55
+  - tile set ciudad_54
+  - tile set ciudad_53
+  - tile set ciudad_52
+  - tile set ciudad_19
+  - tile set ciudad_51
+  - tile set ciudad_18
+  - tile set ciudad_50
+  - tile set ciudad_62
+  - tile set ciudad_13
+  - tile set ciudad_63
+  - tile set ciudad_12
+  - tile set ciudad_60
+  - tile set ciudad_11
+  - tile set ciudad_59
+  - tile set ciudad_61
+  - tile set ciudad_10
+  - tile set ciudad_58
+  - tile set ciudad_17
+  - tile set ciudad_16
+  - tile set ciudad_15
+  - tile set ciudad_14
+  - tile set ciudad_8
+  - tile set ciudad_9
+  - tile set ciudad_0
+  - tile set ciudad_1
+  - tile set ciudad_2
+  - tile set ciudad_3
+  - tile set ciudad_4
+  - tile set ciudad_5
+  - tile set ciudad_6
+  - tile set ciudad_7
+  - tile set ciudad_31
+  - tile set ciudad_30
+  - tile set ciudad_33
+  - tile set ciudad_32
+  - tile set ciudad_44
+  - tile set ciudad_35
+  - tile set ciudad_45
+  - tile set ciudad_34
+  - tile set ciudad_46
+  - tile set ciudad_37
+  - tile set ciudad_47
+  - tile set ciudad_36
+  - tile set ciudad_40
+  - tile set ciudad_39
+  - tile set ciudad_41
+  - tile set ciudad_38
+  - tile set ciudad_42
+  - tile set ciudad_43
+  - tile set ciudad_48
+  - tile set ciudad_49
+  - tile set ciudad_28
+  - tile set ciudad_29
+  - tile set ciudad_26
+  - tile set ciudad_27
+  - tile set ciudad_24
+  - tile set ciudad_25
+  - tile set ciudad_22
+  - tile set ciudad_23
+  - tile set ciudad_20
+  - tile set ciudad_21
+  m_RenderDataMap: {}
+  m_Tag: Suelo
+  m_IsVariant: 0
