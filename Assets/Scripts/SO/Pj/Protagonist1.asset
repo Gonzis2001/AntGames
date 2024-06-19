@@ -12,16 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a6b8018d298e0e41a289d365067e0c0, type: 3}
   m_Name: Protagonist1
   m_EditorClassIdentifier: 
-  hP: 10
+  hP: 1
   hPmax: 10
-  attack: 4
-  magic: 4
+  attack: 96
+  magic: 91
   defense: 0
   defenseMagic: 3
   energy: 1
-  exp: 50
-  expMax: 160
-  level: 6
+  exp: 60
+  expMax: 320
+  level: 7
   vel: 3
   Pj: 
   image: {fileID: 21300000, guid: ef87b868a6dc1254284316ce9de472d1, type: 3}

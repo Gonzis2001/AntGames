@@ -17,7 +17,7 @@ public class ShowLife : MonoBehaviour
     public int magic;
     public int defense;
     public int defenseMagic;
-    public int exp;
+    public float exp;
     public int level;
     public int vel;
     public int energy;

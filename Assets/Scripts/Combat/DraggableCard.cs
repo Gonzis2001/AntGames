@@ -24,6 +24,9 @@ public class DraggableCard : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
     [SerializeField] private GameObject plater;
   
     [SerializeField]  public GameObject deckmanager;
+    private bool isPlayed = false;
+
+    public Vector2 OriginalPosition { get => originalPosition; set => originalPosition = value; }
 
     private void Awake()
     {
@@ -48,21 +51,20 @@ public class DraggableCard : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
         descriptionText.text = card.CardHability;
         tipeText.text = card.CardType;
         costText.text = card.Cost.ToString();
-        if (card.CardType == "Habilidad")
+        switch (card.CardType)
         {
-            backGroundHability.color = Color.yellow;
-        }
-        else if (card.CardType == "Ataque")
-        {
-            backGroundHability.color = Color.red;
-        }
-        else if (card.CardType == "Magia")
-        {
-            backGroundHability.color = Color.blue;
-        }
-        else if (card.CardType == "Objeto")
-        {
-            backGroundHability.color = Color.gray;
+            case "Habilidad":
+                backGroundHability.color = Color.yellow;
+                break;
+            case "Ataque":
+                backGroundHability.color = Color.red;
+                break;
+            case "Magia":
+                backGroundHability.color = Color.blue;
+                break;
+            case "Objeto":
+                backGroundHability.color = Color.gray;
+                break;
         }
     }
 
@@ -83,34 +85,45 @@ public class DraggableCard : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
         canvasGroup.blocksRaycasts = true;
         canvasGroup.alpha = 1.0f;
 
+        
         if (eventData.pointerCurrentRaycast.gameObject != null)
         {
             DropZone dropZone = eventData.pointerCurrentRaycast.gameObject.GetComponent<DropZone>();
-            if (dropZone != null&& deckmanager.GetComponent<CombatManager>().Energy>=card.Cost)
+            if (dropZone != null && deckmanager.GetComponent<CombatManager>().Energy >= card.Cost)
             {
                 dropZone.OnDrop(eventData);
-                Destroy(gameObject);
-                 if (card.CardType != "Objeto")
-                {
-                    
-                deckmanager.GetComponent<DeckManager>().CardToGraveyar(card);
-                }
-                else
-                {
-                    deckmanager.GetComponent<DeckManager>().hand.Remove(card);
-                }
-
-                deckmanager.GetComponent<CombatManager>().Energy-=card.Cost;
-                
             }
             else
             {
+                
                 rectTransform.anchoredPosition = originalPosition;
             }
         }
         else
         {
+         
             rectTransform.anchoredPosition = originalPosition;
         }
+    }
+
+    public void PlayCard()
+    {
+        if (isPlayed)
+            return;
+
+        isPlayed = true;
+        card.Play();
+        Destroy(gameObject);
+
+        if (card.CardType != "Objeto")
+        {
+            deckmanager.GetComponent<DeckManager>().CardToGraveyar(card);
+        }
+        else
+        {
+            deckmanager.GetComponent<DeckManager>().hand.Remove(card);
+        }
+
+        deckmanager.GetComponent<CombatManager>().Energy -= card.Cost;
     }
 }

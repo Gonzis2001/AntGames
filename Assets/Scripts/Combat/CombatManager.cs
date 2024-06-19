@@ -181,7 +181,7 @@ public class CombatManager : MonoBehaviour
         expBar.fillAmount = (pj1.exp /pj1.expMax);
 
         }
-        Debug.Log(expBar.fillAmount);
+        
 
         levelText.text = "Nivel: "+pj1.level.ToString();
          expText.text = pj1.exp.ToString() + " / " + pj1.expMax.ToString();
