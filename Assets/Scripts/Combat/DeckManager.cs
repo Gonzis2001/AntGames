@@ -7,14 +7,19 @@ using UnityEngine.UI;
 public class DeckManager : MonoBehaviour
 {
     [SerializeField] private List<Card> deck;
-    [SerializeField] private List<Card> hand;
+    public List<Card> hand;
     [SerializeField] private List<Card> graveyard;
+    [SerializeField] private List<Card> ObjectDeck;
     [SerializeField] private Transform handTransform;
     [SerializeField] private int numdraw;
     [SerializeField] private int maxhand;
    [SerializeField] private GameObject cardPrefab;
     [SerializeField] private TMP_Text deckText;
     [SerializeField] private TMP_Text graveyardText;
+    [SerializeField] private bool canDrawObject;
+
+    public bool CanDrawObject { get => canDrawObject; set => canDrawObject = value; }
+   
 
 
 
@@ -22,6 +27,7 @@ public class DeckManager : MonoBehaviour
     {
         ShuffleDeck();
         DrawHand();
+        canDrawObject = true;
     }
     private void Update()
     {
@@ -88,5 +94,23 @@ public class DeckManager : MonoBehaviour
         hand.Remove(card);
         graveyard.Add(card);
     }
-   
+    public void DrawObject()
+    {
+        if (ObjectDeck.Count > 0 && canDrawObject)
+        {
+            canDrawObject = false;
+            Card drawnCard = ObjectDeck[0];
+            ObjectDeck.RemoveAt(0);
+            hand.Add(drawnCard);
+
+
+            GameObject cardUI = Instantiate(cardPrefab, handTransform);
+            DraggableCard draggableCard = cardUI.GetComponent<DraggableCard>();
+            draggableCard.InitializeCard(drawnCard);
+
+
+        }
+    }
+
+
 }
