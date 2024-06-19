@@ -12,16 +12,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a6b8018d298e0e41a289d365067e0c0, type: 3}
   m_Name: Protagonist1
   m_EditorClassIdentifier: 
-  hP: 1
+  ObjectDeck:
+  - {fileID: 11400000, guid: 33803e2b3f57c234b97fed348ea9fed9, type: 2}
+  - {fileID: 11400000, guid: 33803e2b3f57c234b97fed348ea9fed9, type: 2}
+  - {fileID: 11400000, guid: 33803e2b3f57c234b97fed348ea9fed9, type: 2}
+  - {fileID: 11400000, guid: 33803e2b3f57c234b97fed348ea9fed9, type: 2}
+  deck:
+  - {fileID: 11400000, guid: fd9f6a82e8d976743a40841347a15962, type: 2}
+  - {fileID: 11400000, guid: fd9f6a82e8d976743a40841347a15962, type: 2}
+  - {fileID: 11400000, guid: 8f220e9d6b3d7b646a17739e9fe2c67c, type: 2}
+  - {fileID: 11400000, guid: 8f220e9d6b3d7b646a17739e9fe2c67c, type: 2}
+  - {fileID: 11400000, guid: 8f220e9d6b3d7b646a17739e9fe2c67c, type: 2}
+  - {fileID: 11400000, guid: 7a568f9546b51c04295293fd0000d4d0, type: 2}
+  - {fileID: 11400000, guid: c9bcb68869cba3643a7e70adcd1688e6, type: 2}
+  - {fileID: 11400000, guid: c9bcb68869cba3643a7e70adcd1688e6, type: 2}
+  hP: 10
   hPmax: 10
-  attack: 96
-  magic: 91
+  attack: 3
+  magic: 3
   defense: 0
   defenseMagic: 3
   energy: 1
-  exp: 60
-  expMax: 320
-  level: 7
+  exp: 2
+  expMax: 10
+  level: 1
   vel: 3
   Pj: 
   image: {fileID: 21300000, guid: ef87b868a6dc1254284316ce9de472d1, type: 3}

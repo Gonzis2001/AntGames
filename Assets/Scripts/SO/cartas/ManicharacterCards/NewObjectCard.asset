@@ -16,8 +16,9 @@ MonoBehaviour:
   cardHability: cura
   cardType: Objeto
   cost: 0
-  art: {fileID: 21300000, guid: 47eb1026a8cec094b926265730c55e10, type: 3}
-  artCharacter: {fileID: 0}
+  art: {fileID: 21300000, guid: bece741e9ae92ab4ba82327e8d3e371e, type: 3}
+  artCharacter: {fileID: 21300000, guid: 47eb1026a8cec094b926265730c55e10, type: 3}
+  artType: {fileID: 21300000, guid: 5f84e2949c38e2d469203415b88fcd8f, type: 3}
   pj: PJ
   player: {fileID: 0}
   heal: 1.67

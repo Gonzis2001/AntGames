@@ -7,7 +7,8 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "Protagonist", menuName = "Heroes")]
 public class PlayerSO : ScriptableObject
 {
-
+    public List<Card> ObjectDeck;
+    public List<Card> deck;
     public float hP;
     public float hPmax;
     public int attack;

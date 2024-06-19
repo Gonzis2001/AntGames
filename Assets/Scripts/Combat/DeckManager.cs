@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class DeckManager : MonoBehaviour
 {
+    [SerializeField] private PlayerSO player;
     [SerializeField] private List<Card> deck;
     public List<Card> hand;
     [SerializeField] private List<Card> graveyard;
@@ -25,6 +26,18 @@ public class DeckManager : MonoBehaviour
 
     void Start()
     {
+        for (int i = 0; i < player.deck.Count; i++)
+        {
+            Card drawnCard = player.deck[i];
+           
+            deck.Add(drawnCard);
+        }
+        for (int i = 0; i < player.ObjectDeck.Count; i++)
+        {
+            Card drawnCard = player.ObjectDeck[i];
+            
+            ObjectDeck.Add(drawnCard);
+        }
         ShuffleDeck();
         DrawHand();
         canDrawObject = true;
@@ -39,7 +52,7 @@ public class DeckManager : MonoBehaviour
     {
        
         numdraw=maxhand-hand.Count;
-        Debug.Log(numdraw);
+       
         for (int i = 0; i < numdraw; i++) 
         {
             DrawCard();
@@ -100,6 +113,7 @@ public class DeckManager : MonoBehaviour
         {
             canDrawObject = false;
             Card drawnCard = ObjectDeck[0];
+            player.ObjectDeck.RemoveAt(0); ;
             ObjectDeck.RemoveAt(0);
             hand.Add(drawnCard);
 

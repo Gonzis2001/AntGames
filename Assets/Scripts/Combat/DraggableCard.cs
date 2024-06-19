@@ -12,6 +12,7 @@ public class DraggableCard : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
     public Card card;
     public Image artworkImage;
     public Image characterArtImage;
+    public Image ArtType;
     public TMP_Text nameText;
     public TMP_Text descriptionText;
     public TMP_Text costText;
@@ -46,6 +47,7 @@ public class DraggableCard : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
     {
         card = newCard;
         artworkImage.sprite = card.Art;
+        ArtType.sprite = card.ArtType;
         characterArtImage.sprite = card.ArtCharacter;
         nameText.text = card.CardName;
         descriptionText.text = card.CardHability;
@@ -55,6 +57,7 @@ public class DraggableCard : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
         {
             case "Habilidad":
                 backGroundHability.color = Color.yellow;
+                
                 break;
             case "Ataque":
                 backGroundHability.color = Color.red;

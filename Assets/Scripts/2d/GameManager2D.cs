@@ -1,12 +1,28 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManager2D : MonoBehaviour
 {
-    [SerializeField] CombatSO combat;
-    [SerializeField] GameObject pj;
-   
+    [SerializeField] private CombatSO combat;
+    [SerializeField] private GameObject pj;
+    [SerializeField] private GameObject canvasMenu;
+    [SerializeField] private PlayerSO datosPlayer;
+    [SerializeField] private TMP_Text hptext;
+    [SerializeField] private TMP_Text attackText;
+    [SerializeField] private TMP_Text magicText;
+    [SerializeField] private TMP_Text defenseText;
+    [SerializeField] private TMP_Text magicDefenseText;
+    [SerializeField] private TMP_Text energytext;
+    [SerializeField] private TMP_Text velText;
+    [SerializeField] private TMP_Text levelText;
+    [SerializeField] private TMP_Text expText;
+    [SerializeField] private Image expbar;
+
+    [SerializeField] private GameObject deckmenu;
+    [SerializeField] private GameObject scrollbar;
     private void Awake()
     {
 
@@ -22,5 +38,62 @@ public class GameManager2D : MonoBehaviour
 
         }
 
+    }
+    private void Update()
+    {
+        if(Input.GetKeyUp(KeyCode.I)) 
+        {
+              if(canvasMenu.activeInHierarchy==false) 
+                {
+                canvasMenu.SetActive(true);
+                hptext.text = "HP: " + datosPlayer.hP + "/" + datosPlayer.hPmax;
+                attackText.text = "Ataque: " + datosPlayer.attack;
+                magicText.text ="Magia: "+datosPlayer.magic;
+                defenseText.text ="Defensa: "+ datosPlayer.defense;
+                magicDefenseText.text = "Defensa Magica: " + datosPlayer.defenseMagic;
+                energytext.text = "Energia: " + datosPlayer.energy;
+                velText.text ="Velocidad: "+ datosPlayer.vel;
+                expText.text = datosPlayer.exp + "/" + datosPlayer.expMax;
+                levelText.text = "Lv: " + datosPlayer.level;
+                 if (datosPlayer.expMax > 0)
+                {
+                    expbar.fillAmount = (datosPlayer.exp / datosPlayer.expMax);
+
+                }
+                Time.timeScale = 0;
+
+                } 
+              else if (canvasMenu.activeInHierarchy == true)
+            {
+                canvasMenu.SetActive(false);
+                Time.timeScale = 1f;
+            }
+        
+        
+        
+        
+        }
+    }
+    public void DeckMenu()
+    {
+        if(deckmenu.activeInHierarchy == false)
+        {
+        scrollbar.SetActive(true);
+        deckmenu.SetActive(true);
+
+        }
+        else if (deckmenu.activeInHierarchy == true)
+        {
+            scrollbar.SetActive(false);
+            deckmenu.SetActive(false);
+        }
+    }
+    public void ExitPause()
+    {
+        if (canvasMenu.activeInHierarchy == true)
+        {
+            canvasMenu.SetActive(false);
+            Time.timeScale = 1f;
+        }
     }
 }
