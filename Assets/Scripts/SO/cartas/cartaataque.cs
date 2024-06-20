@@ -15,7 +15,7 @@ public class cartaataque : Card
             enemySelector = GameObject.Find("GameManager");
         if (enemySelector.GetComponent<EnemySelector>().selectedEnemy != null)
         {
-            
+            Player.Animator.SetTrigger("Attack");
             enemySelector.GetComponent<EnemySelector>().selectedEnemy.GetComponent<Enemies>().TakePhysicaldamage(Player.attack*multiply);
           
         }

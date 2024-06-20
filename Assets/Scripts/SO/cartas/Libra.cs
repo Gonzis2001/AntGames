@@ -12,6 +12,7 @@ public class Libra : Card
         enemySelector = GameObject.Find("GameManager");
         if (enemySelector.GetComponent<EnemySelector>().selectedEnemy != null)
         {
+            Player.Animator.SetTrigger("Hability");
             enemySelector.GetComponent<EnemySelector>().selectedEnemy.GetComponentInChildren<Image>().enabled = true;
         }
     }

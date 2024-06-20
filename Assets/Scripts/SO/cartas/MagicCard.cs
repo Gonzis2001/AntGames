@@ -12,7 +12,7 @@ public class MagicCard : Card
         enemySelector = GameObject.Find("GameManager");
         if (enemySelector.GetComponent<EnemySelector>().selectedEnemy != null)
         {
-
+            Player.Animator.SetTrigger("Magic");
             enemySelector.GetComponent<EnemySelector>().selectedEnemy.GetComponent<Enemies>().TakeMagicDamage(Player.magic);
 
         }

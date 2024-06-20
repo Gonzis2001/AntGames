@@ -9,6 +9,7 @@ public class HealCard : Card
     [SerializeField] private float heal;
     public override void Play()
     {
+        Player.Animator.SetTrigger("Hability");
         Player.hP += heal;
         if (Player.hP > Player.hPmax)
         {

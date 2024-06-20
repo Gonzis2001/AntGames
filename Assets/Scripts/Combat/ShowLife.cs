@@ -23,12 +23,16 @@ public class ShowLife : MonoBehaviour
     public int energy;
     public int defenseBuff;
     public int attackNerf;
+   [SerializeField] private Animator animator;
 
+    public Animator Animator { get => animator; set => animator = value; }
 
-
-
+    private void Awake()
+    {
+    }
     private void Start()
     {
+        animator = GetComponentInChildren<Animator>();
         lifeBar = GetComponentInChildren<Image>();
         canva = GetComponentInChildren<Canvas>();
         cameras = GameObject.Find("Main Camera").transform;
@@ -41,6 +45,7 @@ public class ShowLife : MonoBehaviour
         ChangeColorLifeBar();
         canva.transform.LookAt(cameras);
         canva.transform.rotation = new Quaternion(canva.transform.rotation.x, 0, 0, canva.transform.rotation.w);
+        animator.SetFloat("Life", hP);
     }
     private void ChangeColorLifeBar()
     {
