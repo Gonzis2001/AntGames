@@ -8,7 +8,7 @@ public class Enemig2D : MonoBehaviour
     [SerializeField] private CombatSO combatSO;
     [SerializeField] private GameObject[] enemies;
     [SerializeField] private int id;
-    private void Awake()
+    private void Start()
     {
         for (int i = 0; i < combatSO.id.Count; i++)
         if (combatSO.id[i] == id)

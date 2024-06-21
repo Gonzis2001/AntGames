@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameManager2D : MonoBehaviour
@@ -22,7 +23,9 @@ public class GameManager2D : MonoBehaviour
     [SerializeField] private Image expbar;
 
     [SerializeField] private GameObject deckmenu;
+    [SerializeField] private GameObject deckmenucards;
     [SerializeField] private GameObject scrollbar;
+    [SerializeField] private GameObject cardUI;
     private void Awake()
     {
 
@@ -79,7 +82,14 @@ public class GameManager2D : MonoBehaviour
         if(deckmenu.activeInHierarchy == false)
         {
         scrollbar.SetActive(true);
-        deckmenu.SetActive(true);
+        deckmenu.SetActive(true); 
+           InciateDeckManager("Attack");
+            InciateDeckManager("BigAttack");
+            InciateDeckManager("Libra");
+            InciateDeckManager("MagicAttack");
+            //InciateDeckManager("Libra"); defense
+
+
 
         }
         else if (deckmenu.activeInHierarchy == true)
@@ -88,12 +98,53 @@ public class GameManager2D : MonoBehaviour
             deckmenu.SetActive(false);
         }
     }
+    private void InciateDeckManager(string nombre)
+    {
+       List<Card> listattack1 =new List<Card>();
+        for (int i = 0; i < datosPlayer.deck.Count; i++)
+        {
+            if (datosPlayer.deck[i].name == nombre)
+            {
+                listattack1.Add(datosPlayer.deck[i]);
+               var card= Instantiate(cardUI,deckmenucards.transform);
+              
+                card.GetComponent<ActivarDeactivar>().cardActivate = datosPlayer.deck[i];
+
+            }
+        }
+        int cardactivate=listattack1.Count;
+        listattack1.Clear();
+        for (int i = 0; i < datosPlayer.deckMax.Count; i++)
+        {
+            if (datosPlayer.deckMax[i].name == nombre)
+            {
+                listattack1.Add(datosPlayer.deckMax[i]);
+            }
+        }
+        for (int i = 0; i < (listattack1.Count-cardactivate); i++)
+        {
+            var card = Instantiate(cardUI, deckmenucards.transform);
+
+            card.GetComponent<ActivarDeactivar>().cardActivate = listattack1[i];
+            card.GetComponent<ActivarDeactivar>().active = true;
+        }
+        listattack1.Clear();
+    }
     public void ExitPause()
     {
         if (canvasMenu.activeInHierarchy == true)
         {
             canvasMenu.SetActive(false);
             Time.timeScale = 1f;
+        }
+    }
+    public void BackMenu()
+    {
+        if (canvasMenu.activeInHierarchy == true)
+        {
+            
+            Time.timeScale = 1f;
+            SceneManager.LoadScene(0);
         }
     }
 }

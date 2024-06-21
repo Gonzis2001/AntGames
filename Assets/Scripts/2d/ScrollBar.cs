@@ -17,6 +17,7 @@ public class ScrollBar : MonoBehaviour
         {
           
             scrollbar.onValueChanged.AddListener(OnScrollbarValueChanged);
+            
         }
     }
 

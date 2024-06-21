@@ -9,6 +9,7 @@ public class PlayerSO : ScriptableObject
 {
     public List<Card> ObjectDeck;
     public List<Card> deck;
+    public List<Card> deckMax;
     public float hP;
     public float hPmax;
     public int attack;
