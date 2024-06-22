@@ -8,6 +8,7 @@ using UnityEngine.UI;
 public class GameManager2D : MonoBehaviour
 {
     [SerializeField] private CombatSO combat;
+    [SerializeField] private GameObject tranformBegin;
     [SerializeField] private GameObject pj;
     [SerializeField] private GameObject canvasMenu;
     [SerializeField] private PlayerSO datosPlayer;
@@ -31,7 +32,8 @@ public class GameManager2D : MonoBehaviour
 
         if (!combat.firstTime)
         {
-            combat.positionpj = Vector2.zero;
+            tranformBegin.transform.position = combat.positionpj;
+          combat.positionpj = new Vector3(tranformBegin.transform.position.x,tranformBegin.transform.position.y) ;
             combat.id.Clear();
             combat.firstTime = true;
         }

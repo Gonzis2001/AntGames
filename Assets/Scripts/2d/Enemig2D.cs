@@ -31,6 +31,7 @@ public class Enemig2D : MonoBehaviour
             }
             combatSO.positionpj = collision.transform.position;
             combatSO.id.Add(id);
+            combatSO.escenacargar=SceneManager.GetActiveScene().name;
             SceneManager.LoadScene(2);
 
 

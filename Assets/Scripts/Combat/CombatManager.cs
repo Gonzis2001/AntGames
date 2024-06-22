@@ -131,22 +131,47 @@ public class CombatManager : MonoBehaviour
 
 
         }
+        
+
+    }
+    private void Defeatccanvas()
+    {
         bool allDead = true;
+        for (int i = 0; i < pj.Count; i++)
+        {
+            if (pj.Count != 0)
+            {
+                if (pj[i].hP <= 0)
+                {
+                    allDead = false;
+
+                }
+            }
+        }
         for (int i = 0; i < pj.Count; i++)
         {
             if (pj[i].hP > 0)
             {
-                allDead = false;
+                allDead = true;
 
             }
         }
-        if (allDead)
-        {
-            canvasCombat.SetActive(false);
-            canvasEndDefeat.SetActive(true);
-            
-        }
 
+        if (!allDead)
+        {
+            if (!expActualizar)
+            {
+                StartCoroutine(defeat());
+            }
+
+        }
+    }
+    private IEnumerator defeat()
+    {
+         canvasCombat.SetActive(false);
+           canvasEndDefeat.SetActive(true);
+          expActualizar = true;
+        yield return null;
     }
     private IEnumerator Actualizarexp()
     {
@@ -254,6 +279,7 @@ public class CombatManager : MonoBehaviour
             }
 
             enemies[i].UseHability(objetivo, enemies[i]);
+            Defeatccanvas();
             enemies[i].BuffDown();
 
             AnimatorStateInfo initialStateInfo = enemies[i].animator.GetCurrentAnimatorStateInfo(0);
