@@ -171,6 +171,7 @@ public class CombatManager : MonoBehaviour
          canvasCombat.SetActive(false);
            canvasEndDefeat.SetActive(true);
           expActualizar = true;
+        TranseferirVida();
         yield return null;
     }
     private IEnumerator Actualizarexp()
@@ -206,7 +207,7 @@ public class CombatManager : MonoBehaviour
         expBar.fillAmount = (pj1.exp /pj1.expMax);
 
         }
-            
+        TranseferirVida();
 
         levelText.text = "Nivel: "+pj1.level.ToString();
          expText.text = pj1.exp.ToString() + " / " + pj1.expMax.ToString();
@@ -224,6 +225,10 @@ public class CombatManager : MonoBehaviour
 
             pj.expMax *= 2;
         }
+    }
+    private void TranseferirVida()
+    {
+        pj1.hP = pj[0].hP;
     }
 
     public void PassTurn()

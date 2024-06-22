@@ -89,7 +89,7 @@ public class GameManager2D : MonoBehaviour
             InciateDeckManager("BigAttack");
             InciateDeckManager("Libra");
             InciateDeckManager("MagicAttack");
-            //InciateDeckManager("Libra"); defense
+           InciateDeckManager("Defense"); 
 
 
 

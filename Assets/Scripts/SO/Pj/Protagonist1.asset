@@ -26,6 +26,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: c9bcb68869cba3643a7e70adcd1688e6, type: 2}
   - {fileID: 11400000, guid: fd9f6a82e8d976743a40841347a15962, type: 2}
   - {fileID: 11400000, guid: fd9f6a82e8d976743a40841347a15962, type: 2}
+  - {fileID: 11400000, guid: e0918e79e183ad344ba81f9336ddd986, type: 2}
+  - {fileID: 11400000, guid: e0918e79e183ad344ba81f9336ddd986, type: 2}
   deckMax:
   - {fileID: 11400000, guid: 8f220e9d6b3d7b646a17739e9fe2c67c, type: 2}
   - {fileID: 11400000, guid: 8f220e9d6b3d7b646a17739e9fe2c67c, type: 2}
@@ -42,6 +44,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: fd9f6a82e8d976743a40841347a15962, type: 2}
   - {fileID: 11400000, guid: fd9f6a82e8d976743a40841347a15962, type: 2}
   - {fileID: 11400000, guid: fd9f6a82e8d976743a40841347a15962, type: 2}
+  - {fileID: 11400000, guid: e0918e79e183ad344ba81f9336ddd986, type: 2}
+  - {fileID: 11400000, guid: e0918e79e183ad344ba81f9336ddd986, type: 2}
+  - {fileID: 11400000, guid: e0918e79e183ad344ba81f9336ddd986, type: 2}
   hP: 10
   hPmax: 10
   attack: 3

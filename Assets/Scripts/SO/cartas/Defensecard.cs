@@ -10,7 +10,11 @@ public class Defensecard : Card
     public override void Play()
     {
         Player.Animator.SetTrigger("Hability");
-        Player.defense *= 2;
+        if (Player.defenseBuff == 0)
+        {
+
+          Player.defense *= 2;
+        }
         Player.defenseBuff += 2;
     }
 }
