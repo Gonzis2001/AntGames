@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private List<GameObject> enemeisPrefabs;
     [SerializeField] private Transform[] pjSpawns;
     [SerializeField] private Transform[] enemiesSpawns;
+    
     private void Awake()
     {
         for (int i = 0; i < combatSO.enemeisPrefabs.Length; i++)
@@ -47,6 +48,7 @@ public class GameManager : MonoBehaviour
     }
     public void Defeat()
     {
+        
         SceneManager.LoadScene("MainMenu");
     }
 }

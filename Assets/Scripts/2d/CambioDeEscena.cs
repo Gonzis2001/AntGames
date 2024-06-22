@@ -1,20 +1,22 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CambioDeEscena : MonoBehaviour
 {
-    [SerializeField] private GameObject nuevaPosicion;
+    [SerializeField] CombatSO combatSO;
     [SerializeField] private string escenaCambio;
-    [SerializeField] private GameObject spawn;
-    void Start()
+    [SerializeField] private Vector2 spawn;
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        
+        if (collision.gameObject.CompareTag("PJ"))
+        {
+            combatSO.firstTime = false;
+            combatSO.positionpj = spawn;
+            SceneManager.LoadScene(escenaCambio);
+
+        }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
