@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82cd1d094b598674e83dd366a7b4d362, type: 3}
   m_Name: Defense
   m_EditorClassIdentifier: 
-  cardName: Defenese
+  cardName: Defenderse
   cardHability: Aumenta tu defensa
   cardType: Habilidad
   cost: 1

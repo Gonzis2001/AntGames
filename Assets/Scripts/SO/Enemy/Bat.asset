@@ -12,16 +12,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd92bbc8b8f55a549ac2f2b06703e5fd, type: 3}
   m_Name: Bat
   m_EditorClassIdentifier: 
-  hP: 6
-  hPmax: 6
-  attack: 2
-  magic: 2
-  defense: 2
-  defenseMagic: 2
-  vel: 2
+  hP: 15
+  hPmax: 15
+  attack: 1
+  magic: 4
+  defense: 1
+  defenseMagic: 3
+  vel: 3
+  exp: 10
+  level: 1
   enemies: 
   dieEffect: {fileID: 2245877132120861987, guid: 3f05559d2ec5b9447bab8d01ef8ab592,
     type: 3}
   attackSound: {fileID: 8300000, guid: 8dac75491eed8ff4baad98cfa341f878, type: 3}
   chirridoSound: {fileID: 8300000, guid: 201666655ae85bb48b9a637b45fde3f8, type: 3}
   damageSound: {fileID: 8300000, guid: d6ce912cb5c95204796e564a06d5e9bd, type: 3}
+  rayo: {fileID: 1496873929997785351, guid: 81c3aee8c4fe61c43ba2c5dbc2f1eaec, type: 3}
+  rayoExplosion: {fileID: 2245877132120861987, guid: 39bf6bbbb82688445880d96d00099921,
+    type: 3}
