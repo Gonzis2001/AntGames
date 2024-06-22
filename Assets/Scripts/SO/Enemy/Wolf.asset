@@ -12,13 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 327a4764ac17a8c4585971c15588e72d, type: 3}
   m_Name: Wolf
   m_EditorClassIdentifier: 
-  hP: 10
-  hPmax: 10
+  hP: 20
+  hPmax: 20
   attack: 3
-  magic: 3
-  defense: 3
-  defenseMagic: 3
-  vel: 3
+  magic: 1
+  defense: 2
+  defenseMagic: 1
+  vel: 2
   exp: 20
   level: 1
   enemies: 

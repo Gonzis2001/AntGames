@@ -22,6 +22,7 @@ public class DraggableCard : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
     private RectTransform rectTransform;
     private Vector2 originalPosition;
     private Canvas canvas;
+  
     [SerializeField] private GameObject plater;
   
     [SerializeField]  public GameObject deckmanager;
@@ -111,6 +112,8 @@ public class DraggableCard : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
         else
         {
             deckmanager.GetComponent<DeckManager>().hand.Remove(card);
+            
+            
         }
 
         deckmanager.GetComponent<CombatManager>().Energy -= card.Cost;

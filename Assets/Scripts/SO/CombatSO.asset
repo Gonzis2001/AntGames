@@ -18,7 +18,8 @@ MonoBehaviour:
   - {fileID: 0}
   enemeisPrefabs:
   - {fileID: 7397332272472163882, guid: d38084b8080a7e44cbbf876031716f7e, type: 3}
-  positionpj: {x: 0.21678758, y: 2.4636092, z: 0}
+  - {fileID: 7022051133755125032, guid: 10efe16f3fffc124fb3006c8bdfcd65f, type: 3}
+  positionpj: {x: 0.31088302, y: 2.82911, z: 0}
   id: 01000000
   firstTime: 1
   escenacargar: 2D bosque

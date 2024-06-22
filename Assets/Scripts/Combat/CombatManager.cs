@@ -46,6 +46,7 @@ public class CombatManager : MonoBehaviour
     private void Awake()
     {
         deckManager = GetComponent<DeckManager>();
+        expActualizar = false;
     }
 
     private void Start()

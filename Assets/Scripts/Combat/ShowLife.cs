@@ -23,6 +23,7 @@ public class ShowLife : MonoBehaviour
     public int energy;
     public int defenseBuff;
     public int attackNerf;
+    public bool attackNeerfbool;
    [SerializeField] private Animator animator;
 
     public Animator Animator { get => animator; set => animator = value; }
@@ -88,7 +89,7 @@ public class ShowLife : MonoBehaviour
         attackNerf -= 1;
         if (attackNerf < 0)
         {
-            attackNerf = 0;
+            attackNeerfbool = false;
             attackNerf = playerSO.attack;
         }
     }
