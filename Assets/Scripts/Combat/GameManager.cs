@@ -43,6 +43,10 @@ public class GameManager : MonoBehaviour
 
    public void Continue()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(combatSO.escenacargar);
+    }
+    public void Defeat()
+    {
+        SceneManager.LoadScene("MainMenu");
     }
 }

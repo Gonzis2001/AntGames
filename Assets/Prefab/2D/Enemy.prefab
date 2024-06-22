@@ -136,4 +136,4 @@ MonoBehaviour:
   combatSO: {fileID: 11400000, guid: 303f1fe7b3664874fb440adc5e49888e, type: 2}
   enemies:
   - {fileID: 7397332272472163882, guid: d38084b8080a7e44cbbf876031716f7e, type: 3}
-  id: 2
+  id: 1

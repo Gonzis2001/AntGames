@@ -5,7 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class GameManagerMainMenu : MonoBehaviour
 {
-    // Start is called before the first frame update
+
+    [SerializeField] private CombatSO combatSO;
     void Start()
     {
         
@@ -16,11 +17,14 @@ public class GameManagerMainMenu : MonoBehaviour
     {
         
     }
-    private void NuevaPartida()
+    public void NuevaPartida()
     {
-        SceneManager.LoadScene("");
+        combatSO.firstTime = false;
+        combatSO.positionpj = new Vector2(-4.55f, -7.01f);
+        SceneManager.LoadScene("2D City");
+
     }
-    private void ExitGame()
+    public void ExitGame()
     {
         Application.Quit();
     }
