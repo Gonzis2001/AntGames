@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hP: 20
   hPmax: 20
-  attack: 3
+  attack: 4
   magic: 1
   defense: 2
   defenseMagic: 1

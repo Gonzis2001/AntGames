@@ -5,9 +5,12 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: 192401090d0d4d643bbdf88014b0d0a9
   - enabled: 1
     path: Assets/Scenes/2D pruebas.unity
     guid: 71ae302d5861c6143bd3ad2b5d16fd16
@@ -20,7 +23,4 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/2D bosque.unity
     guid: 8aa7c1b742637fc428def6ee37d99a1f
-  - enabled: 1
-    path: Assets/Scenes/MainMenu.unity
-    guid: 192401090d0d4d643bbdf88014b0d0a9
   m_configObjects: {}

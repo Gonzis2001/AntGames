@@ -59,4 +59,4 @@ MonoBehaviour:
   level: 1
   vel: 3
   Pj: 
-  image: {fileID: 21300000, guid: ef87b868a6dc1254284316ce9de472d1, type: 3}
+  image: {fileID: 21300000, guid: 47eb1026a8cec094b926265730c55e10, type: 3}
