@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 59670d1f8a941bb4bbab3f44d8ae2fc8
+guid: 9ac707c0f1479e64181d3414c20e10b0
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
@@ -9,7 +9,7 @@ TrueTypeFontImporter:
   characterPadding: 1
   includeFontData: 1
   fontNames:
-  - Akilvan
+  - CAT Childs
   fallbackFontReferences: []
   customCharacters: 
   fontRenderingMode: 0

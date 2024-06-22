@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: fb77de11789924d49a1fe1fb0684fb9b
+guid: 7695b97bfee43c447aeb2924d98c7952
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
@@ -9,7 +9,7 @@ TrueTypeFontImporter:
   characterPadding: 1
   includeFontData: 1
   fontNames:
-  - VCR OSD Mono
+  - rainyhearts
   fallbackFontReferences: []
   customCharacters: 
   fontRenderingMode: 0
