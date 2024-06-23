@@ -12,6 +12,7 @@ public class Bat : EnemySo
     [SerializeField] private AudioClip attackSound;
     [SerializeField] private AudioClip chirridoSound;
     [SerializeField] private AudioClip damageSound;
+    [SerializeField] private AudioClip explosionSound;
     [SerializeField] private GameObject rayo;
     [SerializeField] private GameObject rayoExplosion;
     public override float TakePDamage(float damaga, float life, float defense, Animator animator, AudioSource audiosorce, TMP_Text texDamage)
@@ -47,6 +48,7 @@ public class Bat : EnemySo
 
             }
             objetivo.hP -= takeDamage;
+            objetivo.Hit();
             objetivo.Animator.SetTrigger("Hit");
 
         }
@@ -62,7 +64,7 @@ public class Bat : EnemySo
                 objetivo.attackNeerfbool = true;
             }
                 objetivo.attackNerf += 2;
-           me.StartCoroutine(Rayo(objetivo));
+           me.StartCoroutine(Rayo(objetivo,me));
 
 
         }
@@ -73,7 +75,7 @@ public class Bat : EnemySo
         base.Die(life, me, spawn, combat);
     }
 
-    public IEnumerator Rayo(ShowLife objetivo)
+    public IEnumerator Rayo(ShowLife objetivo, Enemies me)
     {
         yield return new WaitForSeconds(2f);
         Debug.Log("rayo");
@@ -83,6 +85,7 @@ public class Bat : EnemySo
         yield return new WaitForSeconds(1f);
         Destroy(rayoclon);
         var rayoclonExplosion=Instantiate(rayoExplosion,posicion, Quaternion.identity);
+        me.audioSource.PlayOneShot(explosionSound);
         yield return new WaitForSeconds(2f);
         Destroy(rayoclonExplosion);
 

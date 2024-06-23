@@ -966,6 +966,9 @@ MonoBehaviour:
   buffatacck: 0
   audioSource: {fileID: 0}
   textdamage: {fileID: 5448392647836630625}
+  hitSpawm: {fileID: 6449363937940026286}
+  hitGameObject: {fileID: 985066093033202273, guid: 2c4ffc4b94f668945a6c009bd38fbb7b,
+    type: 3}
 --- !u!1 &6473115332524132390
 GameObject:
   m_ObjectHideFlags: 0

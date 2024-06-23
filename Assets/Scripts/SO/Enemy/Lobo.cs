@@ -44,6 +44,7 @@ public class Lobo :  EnemySo
             }
             objetivo.hP -=takeDamage;
             objetivo.Animator.SetTrigger("Hit");
+            objetivo.Hit();
 
         }
         else

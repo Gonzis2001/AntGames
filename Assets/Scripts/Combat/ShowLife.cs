@@ -25,6 +25,8 @@ public class ShowLife : MonoBehaviour
     public int attackNerf;
     public bool attackNeerfbool;
    [SerializeField] private Animator animator;
+    [SerializeField] private Transform hitSpawm;
+    [SerializeField] private GameObject hitGameObject;
 
     public Animator Animator { get => animator; set => animator = value; }
 
@@ -92,5 +94,10 @@ public class ShowLife : MonoBehaviour
             attackNeerfbool = false;
             attackNerf = playerSO.attack;
         }
+    }
+    public void Hit()
+    {
+       var hitEffect= Instantiate(hitGameObject, hitSpawm.position, Quaternion.identity);
+        Destroy(hitEffect,2f);
     }
 }

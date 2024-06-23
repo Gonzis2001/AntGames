@@ -24,6 +24,9 @@ public class Enemies : MonoBehaviour
     public AudioSource audioSource;
     private CombatManager combbatManager;
     [SerializeField] private TMP_Text textdamage;
+    [SerializeField] private Transform hitSpawm;
+    [SerializeField] private GameObject hitGameObject;
+
     private void Awake()
     {
         animator = GetComponent<Animator>();
@@ -98,19 +101,24 @@ public class Enemies : MonoBehaviour
    
     public void TakeMagicDamage(float damage)
     {
-        //animator.SetTrigger("TakeDamage");
+      
         hP = enemyStats.TakeMDamage(damage, hP, enemyStats.defenseMagic,animator,audioSource,textdamage);
         StartCoroutine(enemyStats.MostrateDamgage(damage,hP, enemyStats.defense, textdamage));
         enemyStats.Die(hP, this.gameObject,transform.parent,combbatManager);
+        var hitEffect = Instantiate(hitGameObject, hitSpawm.position, Quaternion.identity);
+        Destroy(hitEffect, 2f);
+
 
     }
 
     public void TakePhysicaldamage(float damage)
     {
-       // animator.SetTrigger("TakeDamage");
+  
         hP = enemyStats.TakePDamage(damage, hP, enemyStats.defense, animator, audioSource,textdamage);
         StartCoroutine(enemyStats.MostrateDamgage(damage,hP ,enemyStats.defense, textdamage));
         enemyStats.Die(hP, this.gameObject, transform.parent, combbatManager);
+        var hitEffect = Instantiate(hitGameObject, hitSpawm.position, Quaternion.identity);
+        Destroy(hitEffect, 2f);
 
     }
 
