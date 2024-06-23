@@ -30,7 +30,7 @@ public class Lobo :  EnemySo
 
     }
 
-    public override void Accion(float damage, ShowLife objetivo, Enemies me)
+    public override void Accion(float damage,float damagemagic, ShowLife objetivo, Enemies me)
     {
         float random = Random.Range(0f, 1f);
         if (random <= 0.6f)

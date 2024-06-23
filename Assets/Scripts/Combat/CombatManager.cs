@@ -296,7 +296,7 @@ public class CombatManager : MonoBehaviour
 
            
             yield return new WaitUntil(() =>
-                enemies[i].animator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 0.95f);
+                enemies[i].animator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 2f);
 
         }
         dropZone.SetActive(true);

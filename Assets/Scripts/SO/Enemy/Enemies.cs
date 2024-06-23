@@ -125,7 +125,7 @@ public class Enemies : MonoBehaviour
     public void UseHability(ShowLife pj,Enemies me)
     {
       
-         enemyStats.Accion(attack, pj,me);
+         enemyStats.Accion(attack,magic, pj,me);
     }
 
     

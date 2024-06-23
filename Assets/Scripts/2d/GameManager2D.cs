@@ -27,6 +27,7 @@ public class GameManager2D : MonoBehaviour
     [SerializeField] private GameObject deckmenucards;
     [SerializeField] private GameObject scrollbar;
     [SerializeField] private GameObject cardUI;
+    [SerializeField] private PlayerSO playerSOlevel1;
     private void Awake()
     {
 
@@ -144,7 +145,22 @@ public class GameManager2D : MonoBehaviour
     {
         if (canvasMenu.activeInHierarchy == true)
         {
-            
+            datosPlayer.ObjectDeck = playerSOlevel1.ObjectDeck;
+            datosPlayer.deck = playerSOlevel1.deck;
+            datosPlayer.deckMax = playerSOlevel1.deckMax;
+            datosPlayer.hP = playerSOlevel1.hP;
+            datosPlayer.hPmax = playerSOlevel1.hPmax;
+            datosPlayer.attack = playerSOlevel1.attack;
+            datosPlayer.magic = playerSOlevel1.magic;
+            datosPlayer.defense = playerSOlevel1.defense;
+            datosPlayer.defenseMagic = playerSOlevel1.defenseMagic;
+            datosPlayer.energy = playerSOlevel1.energy;
+            datosPlayer.exp = playerSOlevel1.exp;
+            datosPlayer.expMax = playerSOlevel1.expMax;
+            datosPlayer.level = playerSOlevel1.level;
+            datosPlayer.vel = playerSOlevel1.vel;
+            datosPlayer.Pj = playerSOlevel1.Pj;
+            datosPlayer.image = playerSOlevel1.image;
             Time.timeScale = 1f;
             SceneManager.LoadScene(0);
         }

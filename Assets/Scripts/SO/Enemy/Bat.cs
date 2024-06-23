@@ -33,7 +33,7 @@ public class Bat : EnemySo
 
     }
 
-    public override void Accion(float damage, ShowLife objetivo, Enemies me)
+    public override void Accion(float damage, float magicdamage, ShowLife objetivo, Enemies me)
     {
         float random = Random.Range(0f, 1f);
         if (random <= 0.6f)
@@ -41,7 +41,7 @@ public class Bat : EnemySo
             me.audioSource.PlayOneShot(attackSound);
             me.animator.SetTrigger("Attack");
          
-            float takeDamage = damage - objetivo.defenseMagic;
+            float takeDamage = magicdamage - objetivo.defenseMagic;
             if (takeDamage < 0f)
             {
                 takeDamage = 0f;

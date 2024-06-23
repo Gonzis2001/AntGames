@@ -1,0 +1,62 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a6b8018d298e0e41a289d365067e0c0, type: 3}
+  m_Name: ProtagonistaSave
+  m_EditorClassIdentifier: 
+  ObjectDeck:
+  - {fileID: 11400000, guid: 33803e2b3f57c234b97fed348ea9fed9, type: 2}
+  - {fileID: 11400000, guid: 33803e2b3f57c234b97fed348ea9fed9, type: 2}
+  - {fileID: 11400000, guid: 33803e2b3f57c234b97fed348ea9fed9, type: 2}
+  - {fileID: 11400000, guid: 33803e2b3f57c234b97fed348ea9fed9, type: 2}
+  deck:
+  - {fileID: 11400000, guid: 8f220e9d6b3d7b646a17739e9fe2c67c, type: 2}
+  - {fileID: 11400000, guid: 8f220e9d6b3d7b646a17739e9fe2c67c, type: 2}
+  - {fileID: 11400000, guid: 8f220e9d6b3d7b646a17739e9fe2c67c, type: 2}
+  - {fileID: 11400000, guid: c9bcb68869cba3643a7e70adcd1688e6, type: 2}
+  - {fileID: 11400000, guid: c9bcb68869cba3643a7e70adcd1688e6, type: 2}
+  - {fileID: 11400000, guid: fd9f6a82e8d976743a40841347a15962, type: 2}
+  - {fileID: 11400000, guid: fd9f6a82e8d976743a40841347a15962, type: 2}
+  - {fileID: 11400000, guid: e0918e79e183ad344ba81f9336ddd986, type: 2}
+  - {fileID: 11400000, guid: e0918e79e183ad344ba81f9336ddd986, type: 2}
+  - {fileID: 11400000, guid: 7a568f9546b51c04295293fd0000d4d0, type: 2}
+  deckMax:
+  - {fileID: 11400000, guid: 8f220e9d6b3d7b646a17739e9fe2c67c, type: 2}
+  - {fileID: 11400000, guid: 8f220e9d6b3d7b646a17739e9fe2c67c, type: 2}
+  - {fileID: 11400000, guid: 8f220e9d6b3d7b646a17739e9fe2c67c, type: 2}
+  - {fileID: 11400000, guid: 8f220e9d6b3d7b646a17739e9fe2c67c, type: 2}
+  - {fileID: 11400000, guid: 8f220e9d6b3d7b646a17739e9fe2c67c, type: 2}
+  - {fileID: 11400000, guid: 7a568f9546b51c04295293fd0000d4d0, type: 2}
+  - {fileID: 11400000, guid: 7a568f9546b51c04295293fd0000d4d0, type: 2}
+  - {fileID: 11400000, guid: c9bcb68869cba3643a7e70adcd1688e6, type: 2}
+  - {fileID: 11400000, guid: c9bcb68869cba3643a7e70adcd1688e6, type: 2}
+  - {fileID: 11400000, guid: c9bcb68869cba3643a7e70adcd1688e6, type: 2}
+  - {fileID: 11400000, guid: c9bcb68869cba3643a7e70adcd1688e6, type: 2}
+  - {fileID: 11400000, guid: fd9f6a82e8d976743a40841347a15962, type: 2}
+  - {fileID: 11400000, guid: fd9f6a82e8d976743a40841347a15962, type: 2}
+  - {fileID: 11400000, guid: fd9f6a82e8d976743a40841347a15962, type: 2}
+  - {fileID: 11400000, guid: fd9f6a82e8d976743a40841347a15962, type: 2}
+  - {fileID: 11400000, guid: e0918e79e183ad344ba81f9336ddd986, type: 2}
+  - {fileID: 11400000, guid: e0918e79e183ad344ba81f9336ddd986, type: 2}
+  - {fileID: 11400000, guid: e0918e79e183ad344ba81f9336ddd986, type: 2}
+  hP: 20
+  hPmax: 20
+  attack: 3
+  magic: 3
+  defense: 2
+  defenseMagic: 2
+  energy: 2
+  exp: 0
+  expMax: 20
+  level: 1
+  vel: 3
+  Pj: 
+  image: {fileID: 21300000, guid: 47eb1026a8cec094b926265730c55e10, type: 3}
