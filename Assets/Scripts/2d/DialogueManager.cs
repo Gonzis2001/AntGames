@@ -71,7 +71,7 @@ public class DialogueManager : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && !isTyping)
+        if (Input.GetKeyDown(KeyCode.E) && !isTyping)
         {
             DisplayNextSentence();
         }

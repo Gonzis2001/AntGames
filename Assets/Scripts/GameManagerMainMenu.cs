@@ -8,6 +8,7 @@ public class GameManagerMainMenu : MonoBehaviour
 
     [SerializeField] private CombatSO combatSO;
     [SerializeField] private GameObject panelGuia;
+    [SerializeField] private GameObject[] textoDesactivar;
     void Start()
     {
         
@@ -34,10 +35,18 @@ public class GameManagerMainMenu : MonoBehaviour
         if(panelGuia.activeInHierarchy==false)
         {
             panelGuia.SetActive(true);
+            for(int i = 0; i < textoDesactivar.Length;i++)
+            {
+                textoDesactivar[i].SetActive(false);
+            }
         }
         else
         {
             panelGuia.SetActive(false);
+            for (int i = 0; i < textoDesactivar.Length;i++)
+            {
+                textoDesactivar[i].SetActive(true);
+            }
         }
     }
 }
