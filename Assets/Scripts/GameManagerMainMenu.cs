@@ -7,6 +7,7 @@ public class GameManagerMainMenu : MonoBehaviour
 {
 
     [SerializeField] private CombatSO combatSO;
+    [SerializeField] private GameObject panelGuia;
     void Start()
     {
         
@@ -27,5 +28,16 @@ public class GameManagerMainMenu : MonoBehaviour
     public void ExitGame()
     {
         Application.Quit();
+    }
+    public void GuiadeJuego()
+    {
+        if(panelGuia.activeInHierarchy==false)
+        {
+            panelGuia.SetActive(true);
+        }
+        else
+        {
+            panelGuia.SetActive(false);
+        }
     }
 }

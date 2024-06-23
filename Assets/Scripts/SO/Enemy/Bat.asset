@@ -27,7 +27,7 @@ MonoBehaviour:
   attackSound: {fileID: 8300000, guid: e336742a7e9534c41ba8ccef4960c39e, type: 3}
   chirridoSound: {fileID: 8300000, guid: 9cf76b8aa9030ca4aba6f0817dd8b3be, type: 3}
   damageSound: {fileID: 8300000, guid: 20e0f3398e1a6f24996b67b4daba259f, type: 3}
-  explosionSound: {fileID: 8300000, guid: d3e03c357a96a414fbb48f790de71b0c, type: 3}
+  explosionSound: {fileID: 8300000, guid: 9cf76b8aa9030ca4aba6f0817dd8b3be, type: 3}
   rayo: {fileID: 1496873929997785351, guid: 81c3aee8c4fe61c43ba2c5dbc2f1eaec, type: 3}
   rayoExplosion: {fileID: 2245877132120861987, guid: 39bf6bbbb82688445880d96d00099921,
     type: 3}

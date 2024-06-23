@@ -36,7 +36,7 @@ public class Bat : EnemySo
     public override void Accion(float damage, float magicdamage, ShowLife objetivo, Enemies me)
     {
         float random = Random.Range(0f, 1f);
-        if (random <= 0.6f)
+        if (random <= 0.8f)
         {
             me.audioSource.PlayOneShot(attackSound);
             me.animator.SetTrigger("Attack");
@@ -59,11 +59,11 @@ public class Bat : EnemySo
 
             if (objetivo.attackNeerfbool==false )
             {
-                Debug.Log("A");
-                objetivo.attack /= 2;
+               
+                objetivo.attack -= 1;
                 objetivo.attackNeerfbool = true;
             }
-                objetivo.attackNerf += 2;
+                objetivo.attackNerf += 1;
            me.StartCoroutine(Rayo(objetivo,me));
 
 

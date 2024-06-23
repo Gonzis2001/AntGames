@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class ShowLife : MonoBehaviour
 {
     [SerializeField] private PlayerSO playerSO;
-    
+
     [SerializeField] private Transform cameras;
 
     private Canvas canva;
@@ -24,9 +24,12 @@ public class ShowLife : MonoBehaviour
     public int defenseBuff;
     public int attackNerf;
     public bool attackNeerfbool;
-   [SerializeField] private Animator animator;
+    public bool defenseBuffbool;
+    [SerializeField] private Animator animator;
     [SerializeField] private Transform hitSpawm;
     [SerializeField] private GameObject hitGameObject;
+    [SerializeField] private GameObject nerfAttackImagen; 
+    [SerializeField] private GameObject buffDefenseImagen;
 
     public Animator Animator { get => animator; set => animator = value; }
 
@@ -39,17 +42,36 @@ public class ShowLife : MonoBehaviour
         lifeBar = GetComponentInChildren<Image>();
         canva = GetComponentInChildren<Canvas>();
         cameras = GameObject.Find("Main Camera").transform;
+
         UpdateStats();
     }
 
     private void Update()
     {
-        lifeBar.fillAmount = hP/hPmax;
+        lifeBar.fillAmount = hP / hPmax;
         ChangeColorLifeBar();
         canva.transform.LookAt(cameras);
         canva.transform.rotation = new Quaternion(canva.transform.rotation.x, 0, 0, canva.transform.rotation.w);
         animator.SetFloat("Life", hP);
+        actualizarNerfsAndBuffs(attackNeerfbool, nerfAttackImagen);
+        actualizarNerfsAndBuffs(defenseBuffbool,buffDefenseImagen);
+
+
     }
+
+    private void actualizarNerfsAndBuffs(bool nerbool, GameObject nerfimagen)
+    {
+        if (nerbool)
+        {
+
+            nerfimagen.SetActive(true);
+        }
+        else if (nerfimagen != null)
+        {
+            nerfimagen.SetActive(false);
+        }
+    } 
+
     private void ChangeColorLifeBar()
     {
         
@@ -83,15 +105,17 @@ public class ShowLife : MonoBehaviour
     public void BuffDown()
     {
         defenseBuff -= 1;
-        if (defenseBuff < 0)
+        if (defenseBuff <= 0)
         {
             defenseBuff = 0;
+            defenseBuffbool = false;
             defense = playerSO.defense;
         }
         attackNerf -= 1;
-        if (attackNerf < 0)
+        if (attackNerf <= 0)
         {
             attackNeerfbool = false;
+            attackNerf= 0;
             attackNerf = playerSO.attack;
         }
     }

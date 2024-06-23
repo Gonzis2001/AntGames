@@ -9,6 +9,8 @@ public class Backpac : MonoBehaviour
     [SerializeField] private DialogueManager dialogueManager;
 
     [SerializeField] private string[] dialogue;
+    [SerializeField] GameObject canvas;
+    [SerializeField] private int numPotis;
 
 
 
@@ -30,9 +32,9 @@ public class Backpac : MonoBehaviour
 
             isTalking = true;
             player.hP = player.hPmax;
-            if (player.ObjectDeck.Count < 4)
+            if (player.ObjectDeck.Count < numPotis)
             {
-                int veces = 4 - player.ObjectDeck.Count;
+                int veces =  numPotis- player.ObjectDeck.Count;
                 for (int i = 0; i < veces; i++)
                 {
                    player.ObjectDeck.Add(potion);
@@ -41,11 +43,20 @@ public class Backpac : MonoBehaviour
             }
             dialogueManager.StartDialogue(dialogue);
         }
-        
+        if (collision.CompareTag("PJ") && !isTalking)
+        {
+            canvas.SetActive(true);
+
+        }
+
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
-        
+        if (collision.CompareTag("PJ"))
+        {
+            canvas.SetActive(false);
+
+        }
     }
 
     private void Update()

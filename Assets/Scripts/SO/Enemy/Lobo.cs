@@ -51,7 +51,7 @@ public class Lobo :  EnemySo
         {
             me.audioSource.PlayOneShot(howlSound);
             me.animator.SetTrigger("Howl");
-            me.buffatacck = 3;
+            me.buffatacck = 2;
         }
        
     }

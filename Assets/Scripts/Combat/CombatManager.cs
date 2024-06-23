@@ -266,12 +266,13 @@ public class CombatManager : MonoBehaviour
     private IEnumerator EnemyTurn()
     {
         turnEnemy = false;
-        yield return new WaitForSeconds(0.2f);
+     
 
 
        for (int i = 0; i < enemies.Count; i++)
         {
 
+            yield return new WaitForSeconds(1f);
             ShowLife objetivo = null;
             int intentos = 0;
             while (objetivo == null && intentos < pj.Count)
@@ -296,7 +297,7 @@ public class CombatManager : MonoBehaviour
 
            
             yield return new WaitUntil(() =>
-                enemies[i].animator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 2f);
+                enemies[i].animator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 0.8f);
 
         }
         dropZone.SetActive(true);

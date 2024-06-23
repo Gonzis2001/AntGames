@@ -14,6 +14,7 @@ public class Defensecard : Card
         {
 
           Player.defense *= 2;
+            Player.defenseBuffbool = true;
         }
         Player.defenseBuff += 2;
     }

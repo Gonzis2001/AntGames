@@ -17,7 +17,7 @@ MonoBehaviour:
   attack: 4
   magic: 1
   defense: 2
-  defenseMagic: 1
+  defenseMagic: 0
   vel: 2
   exp: 20
   level: 1

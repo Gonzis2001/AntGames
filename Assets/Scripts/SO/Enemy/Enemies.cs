@@ -16,7 +16,7 @@ public class Enemies : MonoBehaviour
     public int defenseMagic;
     public int vel;
     public int exp;
-    private Canvas canva;
+    public Canvas canva;
     private Image lifeBar;
     private Transform cameras;
     public Animator animator;
@@ -26,6 +26,7 @@ public class Enemies : MonoBehaviour
     [SerializeField] private TMP_Text textdamage;
     [SerializeField] private Transform hitSpawm;
     [SerializeField] private GameObject hitGameObject;
+    [SerializeField] private GameObject buffimage;
 
     private void Awake()
     {
@@ -51,6 +52,14 @@ public class Enemies : MonoBehaviour
             ChangeColorLifeBar();
             canva.transform.LookAt(cameras);
             canva.transform.rotation = new Quaternion(canva.transform.rotation.x, 0, 0, canva.transform.rotation.w);
+            if (buffatacck > 0&& buffimage!=null)
+            {
+                buffimage.SetActive(true);
+            }
+            else if (buffimage != null)
+            {
+                buffimage.SetActive(false);
+            }
         }
         UpdateBuffs();
     }
