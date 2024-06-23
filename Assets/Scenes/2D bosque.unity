@@ -8218,16 +8218,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 165044565501101726, guid: 49f6d28d00a4c0f4baba21e636a43469,
-        type: 3}
-      propertyPath: m_RenderMode
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1070539498871298573, guid: 49f6d28d00a4c0f4baba21e636a43469,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 2094731155513367794, guid: 49f6d28d00a4c0f4baba21e636a43469,
         type: 3}
       propertyPath: pj
@@ -8238,41 +8228,10 @@ PrefabInstance:
       propertyPath: tranformBegin
       value: 
       objectReference: {fileID: 498418358}
-    - target: {fileID: 2094731155513367794, guid: 49f6d28d00a4c0f4baba21e636a43469,
-        type: 3}
-      propertyPath: playerSOlevel1
-      value: 
-      objectReference: {fileID: 11400000, guid: 32745082050b1364285e7fda4f38f561,
-        type: 2}
     - target: {fileID: 2937263898600298611, guid: 49f6d28d00a4c0f4baba21e636a43469,
         type: 3}
       propertyPath: m_Name
       value: Gamemanager2d
-      objectReference: {fileID: 0}
-    - target: {fileID: 7336508099497999262, guid: 49f6d28d00a4c0f4baba21e636a43469,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8117850865274232887, guid: 49f6d28d00a4c0f4baba21e636a43469,
-        type: 3}
-      propertyPath: m_UiScaleMode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8117850865274232887, guid: 49f6d28d00a4c0f4baba21e636a43469,
-        type: 3}
-      propertyPath: m_ReferenceResolution.x
-      value: 1920
-      objectReference: {fileID: 0}
-    - target: {fileID: 8117850865274232887, guid: 49f6d28d00a4c0f4baba21e636a43469,
-        type: 3}
-      propertyPath: m_ReferenceResolution.y
-      value: 1080
-      objectReference: {fileID: 0}
-    - target: {fileID: 8173297529979046770, guid: 49f6d28d00a4c0f4baba21e636a43469,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8553442345183330843, guid: 49f6d28d00a4c0f4baba21e636a43469,
         type: 3}
