@@ -213,7 +213,7 @@ GameObject:
   - component: {fileID: 214348465}
   - component: {fileID: 214348464}
   m_Layer: 5
-  m_Name: Panel
+  m_Name: PanelGuia
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -232,12 +232,13 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1329879540}
+  - {fileID: 498811370}
   m_Father: {fileID: 1653857238}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.17993, y: 0}
-  m_SizeDelta: {x: -90.3595, y: -63.2516}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: -76.5703, y: -52.9572}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &214348464
 MonoBehaviour:
@@ -252,7 +253,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.6509434, g: 0.6509434, b: 0.6509434, a: 0.392}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.49803922}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -362,10 +363,10 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 72
+  m_fontSize: 24
   m_fontSizeBase: 24
   m_fontWeight: 400
-  m_enableAutoSizing: 1
+  m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
@@ -571,6 +572,156 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!1 &498811369
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 498811370}
+  - component: {fileID: 498811372}
+  - component: {fileID: 498811371}
+  m_Layer: 5
+  m_Name: GuiaTexto
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &498811370
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 498811369}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 214348463}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0.00012207031, y: -1.7147827}
+  m_SizeDelta: {x: 0.64001465, y: -3.6799927}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &498811371
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 498811369}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: "Bienvenido a la versi\xF3n temprana de \"A Journey to Unleashed Worlds\".\nEn
+    este apartado te explicar\xE9 c\xF3mo jugar los combates por si tienes algunas
+    dudas.\n\nPara realizar cualquier acci\xF3n sobre cualquier enemigo, lo primero
+    que deber\xE1s hacer ser\xE1 seleccionar al enemigo al que quieras atacar. Cuando
+    el blanco del suelo lo marque, podr\xE1s empezar a atacar.\nPara atacar, dispones
+    de tu mazo de cartas. Estas tienen un precio en energ\xEDa; dependiendo del nivel
+    de tu personaje, tendr\xE1s una cantidad de energ\xEDa por turno u otra. Este
+    n\xFAmero se refleja en el s\xEDmbolo redondo de color azul en la parte inferior
+    izquierda de la pantalla. Debajo, tendr\xE1s el icono de cu\xE1ntas cartas quedan
+    en tu mazo y cu\xE1ntas has usado. A su lado tambi\xE9n ver\xE1s tus cartas de
+    curaci\xF3n, puedes usar una por turno y son limitadas.\nLas cartas hacen cosas
+    distintas: algunas hacen da\xF1o m\xE1gico, otras f\xEDsico, otras te otorgan
+    efectos y otras te revelan informaci\xF3n. \xDAsalas con cabeza e intenta averiguar
+    a qu\xE9 enemigos es m\xE1s efectivo atacar con magia o con da\xF1o f\xEDsico.\n\nPara
+    finalizar, tienes que tener en cuenta que los enemigos te pueden aplicar efectos
+    negativos. Cuidado con ellos."
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 2a5282515b0e5a2408ac0b7d995e6679, type: 2}
+  m_sharedMaterial: {fileID: 5788366413054481955, guid: 2a5282515b0e5a2408ac0b7d995e6679,
+    type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 18
+  m_fontSizeBase: 18
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 1
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &498811372
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 498811369}
+  m_CullTransparentMesh: 1
 --- !u!1001 &549729200
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -828,7 +979,7 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_HighlightedColor: {r: 1, g: 1, b: 1, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
@@ -934,10 +1085,10 @@ RectTransform:
   - {fileID: 1175834707}
   m_Father: {fileID: 1653857238}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.3634375, y: 0.17400001}
-  m_AnchorMax: {x: 0.6316668, y: 0.32125926}
-  m_AnchoredPosition: {x: 0, y: 35.690002}
-  m_SizeDelta: {x: -68.5408, y: -71.380005}
+  m_AnchorMin: {x: 0.40600002, y: 0.26310927}
+  m_AnchorMax: {x: 0.59924996, y: 0.33466557}
+  m_AnchoredPosition: {x: 0.079589844, y: -0.30230713}
+  m_SizeDelta: {x: -0.38199997, y: -68.3846}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &902573577
 MonoBehaviour:
@@ -1226,8 +1377,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -0.000045776367, y: 0}
+  m_SizeDelta: {x: 0.000030518, y: 72.7854}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1175834708
 MonoBehaviour:
@@ -1277,10 +1428,10 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 71.85
+  m_fontSize: 24
   m_fontSizeBase: 24
   m_fontWeight: 400
-  m_enableAutoSizing: 1
+  m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
@@ -1313,7 +1464,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: 0.2906227, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1412,7 +1563,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 72
+  m_fontSize: 23.75
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1496,8 +1647,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: -0.000030517578}
+  m_SizeDelta: {x: 87.8644, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1316130784
 MonoBehaviour:
@@ -1529,8 +1680,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1631,10 +1782,10 @@ RectTransform:
   - {fileID: 1316130783}
   m_Father: {fileID: 214348463}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.8777412}
-  m_AnchorMax: {x: 0.14165178, y: 1}
-  m_AnchoredPosition: {x: 15, y: 4}
-  m_SizeDelta: {x: -100, y: -94}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -310.65997, y: -174.17209}
+  m_SizeDelta: {x: -620.68005, y: -445.6257}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1329879541
 MonoBehaviour:
@@ -1893,7 +2044,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.3634375, y: 0.03251852}
   m_AnchorMax: {x: 0.6316668, y: 0.18977779}
-  m_AnchoredPosition: {x: 4.4997864, y: 4.3804016}
+  m_AnchoredPosition: {x: 4.4997864, y: 38.6}
   m_SizeDelta: {x: -61.221985, y: -8.760803}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1458049677
@@ -2040,7 +2191,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
