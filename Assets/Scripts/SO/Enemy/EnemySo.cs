@@ -26,16 +26,30 @@ public  class  EnemySo : ScriptableObject
 
     public virtual float TakePDamage(float damage,float life,float defense,Animator animator, AudioSource audiosorce, TMP_Text texDamage)
     {
-        life -= (damage-defense);
+        float takeDamage = (damage - defense);
+        if (takeDamage < 0)
+        {
+            takeDamage = 0;
+        }
 
-     
+
+        life -= takeDamage;
+
+
 
         return (life);
     }
     public virtual float TakeMDamage(float damage, float life, float defense, Animator animator, AudioSource audiosorce, TMP_Text texDamage)
     {
-        life -= (damage-defense);
-       
+        float takeDamage = (damage - defense);
+        if (takeDamage < 0)
+        {
+            takeDamage = 0;
+        }
+
+
+        life -= takeDamage;
+
 
         return (life);
     }
@@ -61,7 +75,13 @@ public  class  EnemySo : ScriptableObject
         {
 
             texDamage.enabled = true;
-            texDamage.text = (damage - defense).ToString();
+            float takeDamage = (damage - defense);
+            if (takeDamage < 0)
+            {
+                takeDamage = 0;
+            }
+
+            texDamage.text = takeDamage.ToString();
             yield return new WaitForSeconds(1f);
             texDamage.enabled = false;
         }

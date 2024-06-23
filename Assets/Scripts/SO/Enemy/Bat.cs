@@ -39,7 +39,14 @@ public class Bat : EnemySo
         {
             me.audioSource.PlayOneShot(attackSound);
             me.animator.SetTrigger("Attack");
-            objetivo.hP -= (damage - objetivo.defenseMagic);
+         
+            float takeDamage = damage - objetivo.defenseMagic;
+            if (takeDamage < 0f)
+            {
+                takeDamage = 0f;
+
+            }
+            objetivo.hP -= takeDamage;
             objetivo.Animator.SetTrigger("Hit");
 
         }

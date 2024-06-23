@@ -37,7 +37,12 @@ public class Lobo :  EnemySo
         {
             me.audioSource.PlayOneShot(attackSound);
             me.animator.SetTrigger("Attack");
-            objetivo.hP -=damage-objetivo.defense;
+            float takeDamage = damage - objetivo.defense;
+            if (takeDamage < 0f)
+            {takeDamage = 0f;
+
+            }
+            objetivo.hP -=takeDamage;
             objetivo.Animator.SetTrigger("Hit");
 
         }
