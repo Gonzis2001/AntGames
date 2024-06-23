@@ -59,7 +59,7 @@ public  class  EnemySo : ScriptableObject
     }
     public virtual void Die(float life,GameObject me,Transform spawn,CombatManager combat)
     {
-        if (life < 0)
+        if (life <= 0)
         {
 
             combat.Exp += me.GetComponent<Enemies>().exp;
